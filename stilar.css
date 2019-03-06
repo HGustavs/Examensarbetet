@@ -33,7 +33,7 @@
 		text-decoration:none;
 		color:#555;
 		display:block;
-		padding:8px;
+		padding:.75em 1.75em;
 	}
 	
 	nav ul li:hover{
