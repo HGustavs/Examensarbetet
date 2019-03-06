@@ -17,3 +17,10 @@
 	nav{
 		background:#fff;
 	}
+	
+	nav ul{
+		padding:0;
+		margin:o;
+		list-style:none;
+		position:relative;
+	}
