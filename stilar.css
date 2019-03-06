@@ -6,16 +6,11 @@
 		font-family:sans-serif;
 	}
 	
-	body{
-		background:#e7e7e9;
-	}
+		
 	
-	.wrapper{
-		width:100%;                     
-	}
 	.mega_menu{
 		width:100%;
-		height:60px;
+		height:59px;
 		
 	}
 	.mega_menu ul{
@@ -37,21 +32,19 @@
 	.mega_menu ul li a{
 		text-decoration:none;
 		color:black;
-		text-transform:uppercase;
 		font-weight:bold;
 		letter-spacing:5px;
-		font-size:12px;
+		font-size:16px;
 		display:block;
 		
 	}
-	.sub_menu ul li{
+	.mega_menu ul li .sub_menu ul li{
 		position:absolute;
 		background:white;
 		width:100%;
-		left:0;
+		
 		height:180px;
 		padding:25px 15px;
-		display:flex;
 		line-height:35px;
 		visibility:hidden;
 		
@@ -65,15 +58,16 @@
 	.mega_menu ul li:hover a{
 		color:lightgreen;
 	}
-	.mega_menu ul li:hover{
+	.mega_menu ul li:hover .sub_menu ul li{
 		visibility:visible;
 	}
 	
-	.col a{
+	.sub_menu ul li a{
 		float:left;
 		padding-left:80px;
-		margin-top:15px;
+		margin-top:5px;
 		font-size:14px;
+		
 		
 	}
 	
