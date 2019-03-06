@@ -13,12 +13,12 @@
 	.wrapper{
 		width:100%;                     
 	}
-	nav .mega_menu{
+	.mega_menu{
 		width:100%;
 		height:60px;
 		
 	}
-	nav .mega_menu ul{
+	.mega_menu ul{
 		width:100%;
 		height:100%;
 		background:white;
@@ -27,14 +27,14 @@
 		position:relative;
 		
 	}
-	nav .mega_menu ul li{
+	.mega_menu ul li{
 		display:inline-block;
 		margin:0 15px;
 		padding:0 15px;
 		
 	}
 	
-	nav .mega_menu ul li a{
+	.mega_menu ul li a{
 		text-decoration:none;
 		color:black;
 		text-transform:uppercase;
@@ -44,7 +44,7 @@
 		display:block;
 		
 	}
-	nav .mega_menu ul li .sub_menu ul li{
+	.mega_menu ul li .sub_menu ul li{
 		position:absolute;
 		background:white;
 		width:100%;
@@ -59,13 +59,13 @@
 	
 	
 	
-	nav .mega_menu ul li:hover{
+	.mega_menu ul li:hover{
 		background:#2c2c2c;
 	}
-	nav .mega_menu ul li:hover a{
+	.mega_menu ul li:hover a{
 		color:lightgreen;
 	}
-	nav .mega_menu ul li:hover .sub_menu{
+	.mega_menu ul li:hover .sub_menu{
 		visibility:visible;
 	}
 	
