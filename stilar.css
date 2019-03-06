@@ -18,25 +18,29 @@
 		background:#fff;
 	}
 	
-	nav ul{
+	nav ul li{
 		padding:0;
 		margin:o;
 		list-style:none;
 		position:relative;
 	}
 	
-	nav li{
+	nav ul li{
 		display:inline-block;
 	}
 	
-	nav a{
+	nav ul li a{
 		text-decoration:none;
 		color:#555;
 		display:block;
 		padding:8px;
 	}
 	
-	nav li:hover{
+	nav ul li:hover{
 		background:#f8f8f8;
+	}
+	
+	.menu-sub ul li{
+		position:absolut;
 	}
 	
