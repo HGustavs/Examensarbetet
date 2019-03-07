@@ -39,17 +39,20 @@
 	
 	nav li:hover{
 		background:#f8f8f8;
+		
 	}
 	
 	.menu-sub{
 		position:absolute;
 		width:100%;
 		display:none;
+		background:white;
 		
 	}
 	
-	nav li:hover > .menu-sub{
+	.menu-main:hover .menu-sub{
 		display:block;
+		
 	}
 	
 	
