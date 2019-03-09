@@ -1,0 +1,143 @@
+<html lang="en"> 
+
+  <head> 
+    
+	<link rel="stylesheet" href="stilar.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width,initial-scale-1">
+	<title>Megameny</title>
+	<style>
+	*{
+	margin:0 auto;
+	}
+	
+	body{
+	background-image: url("midsommarros.jpg");
+		}
+		
+		ul{
+		background:#069;
+		height:35px;
+		padding:10px 10px 15px;
+		margin:auto;
+		
+		}
+		
+		ul li{
+		list-style-type:none;
+		display:inline;
+		}
+		
+		ul li a{
+		text-decoration:none;
+		float:left;
+		width:auto;
+		margin-right:15px;
+		color:#fff;
+		padding:10px 25px;
+		}
+		
+		ul li:hover a{
+		color:d7d7d7;
+		background:#fff;
+		}
+		
+		.active{
+		color:#d7d7d7;
+		background:#fff;
+		}
+		.submenu{
+		position:absolute;
+		width:100%;
+		margin-left:0;
+		margin-top:35px;
+		padding:10px;
+		height:260px;
+		color:#fff;
+		background:#069;
+		border-top:5px solid #fff;
+		display:none;
+				
+		}
+		.submenulist{
+		width:75px;
+		float:left;
+		margin:20px;
+		
+		
+		
+		}
+		.submenulist li{
+		
+		display:block;
+		
+		
+		}
+		ul li:hover .submenulist li a{
+			background:#069;
+			color:#fff;
+			}
+		ul li:hover .submenu{
+		display:block;
+		}
+		
+		
+		</style>
+
+  </head> 
+  <body> 
+    
+ 
+	<nav>
+		
+		<ul>
+			<li><a href="#">Hem</a></li>
+			<li><a href="#">Blommor</a>
+				<div class="submenu">
+					<ul class="submenulist">
+					<h3>Tulpaner</h3>
+					<li a href="#">Gul</a></li>
+					<li a href="#">Röd</a></li>
+					<li a href="#">Rosa</a></li>
+					<li a href="#">Orange</a></li>
+					<li a href="#">Lila</a></li>
+					</ul>
+					<ul class="submenulist">
+					<h3>Rosor</h3>
+					<li a href="#">Gul</a></li>
+					<li a href="#">Rosa</a></li>
+					<li a href="#">Röd</a></li>
+					<li a href="#">Orange</a></li>
+					<li a href="#">Vit</a></li>
+					</ul>
+					<ul class="submenulist">
+					<h3>Pioner</h3>
+					<li a href="#">Röd</a></li>
+					<li a href="#">Lila</a></li>
+					<li a href="#">Rosa</a></li>
+					<li a href="#">Cerise</a></li>
+					
+					</ul>
+					</div>
+					</li>
+					
+			<li><a href="#">Festhögtid</a>
+				
+			</li>
+			
+			<li><a href="#">E-handel</a>
+					
+			</li>
+			<li><a href="#">Kontakt</a></li>
+			</ul>
+			
+		
+		
+		
+		
+			
+	</nav>
+	
+			
+	</body>
+  </html>
