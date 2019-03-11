@@ -14,7 +14,7 @@
 		}
 		#nav li{
 			list-style:none;
-			background-color:#fff;
+			background-color:#B2EBF2;
 			width:250px;
 			border-bottom:1px solid gray;
 		}
@@ -24,7 +24,7 @@
 			border-left:1px solid #444;
 			text-decoration:none;
 			box-shadow:2px 2px 5px #ccc;
-			color:#555;
+			color:#000000;
 		}
 		#nav li a:hover{
 			border-left:4px solid #069; background:#f8f8f8;

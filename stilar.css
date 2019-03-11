@@ -18,7 +18,7 @@
 	
 	
 	nav{
-		background:#fff;
+		background:#B2EBF2;
 	}
 	
 	nav ul{
@@ -36,7 +36,7 @@
 	
 	nav a{
 		text-decoration:none;
-		color:#555;
+		color:#000000;
 		display:block;
 		padding:.75em 1.75em;
 	}
@@ -50,7 +50,7 @@
 		position:absolute;
 		width:100%;
 		display:none;
-		background:white;
+		background:#B2EBF2;
 		padding:2em;
 		left:0;
 		
@@ -100,7 +100,7 @@
 		position:absolute;
 		width:100%;
 		display:none;
-		background:white;
+		background:#B2EBF2;
 		padding:2em;
 		left:0;
 		
