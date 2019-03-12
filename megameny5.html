@@ -26,11 +26,17 @@
 		padding:0;
 		margin:auto;
 		
+		
+		
 		}
 		
 		ul li{
 		list-style-type:none;
 		display:inline;
+		-webkit-transition:all 0.3s; 
+		-o-transition:all 0.3s; 
+		transition:all 0.3s; 
+		
 		}
 		
 		ul li a{
@@ -39,17 +45,24 @@
 		width:auto;
 		margin-right:15px;
 		color:#000000;
-		padding:10px 25px;
+		padding:15px 25px;
+		font:bold 12px/18px sans-serif;
+		font-family:"Arial";		
+		font-size:18px;
+		text-align:center;
 		}
 		
 		ul li:hover a{
-		color:d7d7d7;
-		background:#fff;
+		color:#fff;
+		background:#006064;
+		font-size:18px;
+		padding:10px;
 		}
 		
 		.active{
-		color:#d7d7d7;
-		background:#fff;
+		color:#fff;
+		background:#006064;
+		padding:10px;
 		}
 		.submenu{
 		position:absolute;
@@ -58,22 +71,31 @@
 		margin-top:35px;
 		padding:10px;
 		height:260px;
+		line-height:50px;
 		color:#000000;
 		background:#B2EBF2;
-		border-top:5px solid #fff;
+		border-top:5px solid #006064;
 		display:none;
+		box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+		font-family:"Verdana";
 				
 		}
 		.submenulist{
 		width:75px;
 		float:left;
 		margin:20px;
-		padding:5px
+		padding:5px;
+		font:bold 12px/18px sans-serif; 
+		font-size:18px;
+		
 		
 		}
 		.submenulist li{
-		
+		font:12px/18px sans-serif; 
+		font-family:"Verdana";
+		font-size:18px;
 		display:block;
+		line-height:30px;
 		
 		
 		}
@@ -84,10 +106,16 @@
 		}
 		
 		nav li:hover{
-		background:#fff;
+		background:#006064;
+		color:#fff;
 		margin:0;
 		
 	}
+	
+	.active{
+		color:#fff;
+		background:#006064;
+		}
 		
 		
 		

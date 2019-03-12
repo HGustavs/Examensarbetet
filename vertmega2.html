@@ -20,24 +20,32 @@
 	background-size:cover;
 	max-width:1000px;
 	}
+	
+	nav{
+	width:130px;
+	}
 				 
 		ul{
 		background-color:#B2EBF2;
 		height:250px;
 		width:130px;
-		padding:10;
+		padding:0;
 		margin:0;
-		
+		box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+		text-align:center;
 		}
+		
+		
 		
 		ul li{
 		list-style-type:none;
 		display:block;
-		line-height:40px;
-		
-	
-		
-		
+		-webkit-transition:all 0.3s; 
+		-o-transition:all 0.3s; 
+		transition:all 0.3s; 
+		border-bottom:1px solid gray;
+		width:130px;
+		margin:0;
 		
 		}
 		
@@ -46,41 +54,49 @@
 		padding:5px;
 		color:#000000;
 		text-align:center;
+		font-family:"Arial";
+		font:bold 12px/18px sans-serif; 
+		font-size:18px;
+		line-height:50px;
 		
 		
 		}
 		
 		ul li:hover a{
-		color:d7d7d7;
-		background:#069;
+		color:#fff;
+		background:#006064;
 		}
 		
 		.active{
 		color:#d7d7d7;
-		background:#fff;
+		background:#006064;
 		}
 		.submenu{
 		position:absolute;
 		margin-bottom:80px;
-		margin-left:110px;
-		margin-top:-40px;
-		padding-left:20px;
-		height:300px;
+		margin-left:127px;
+		margin-top:-50px;
 		color:#000000;
 		background:#B2EBF2;
-		line-height:20px;
+		line-height:25px;
 		display:none;
+		border-left:5px solid #006064;
+		
 				
 		}
 		.submenulist{
-		
+		line-height:41px;
 		float:left;
+		
 		
 		}
 		.submenulist a{
 		padding:15px 20px;
 		color:#000000;
 		font-size:18px;
+		font-family:"Verdana";
+		text-align:center;
+		border-bottom:1px solid gray;
 		
 			
 		}
@@ -93,16 +109,18 @@
 		
 		}
 		ul li:hover .submenulist li a{
-			background:#069;
+			background:#006064;
 			color:#fff;
+			padding:5px;
 			}
 		ul li:hover .submenu{
 		display:block;
 		}
 		
 		.submenulist li:hover{
-			background:#069;
+			background:#006064;
 			color:#fff;
+			padding:5px;
 			}
 		
 		
@@ -131,7 +149,7 @@
 					<h3>Rosor</h3>
 					<li a href="#">Gul</a></li>
 					<li a href="#">Rosa</a></li>
-					<li a href="#">Röd</a></li>
+					<li a href="midsommarros.jpg">Röd</a></li>
 					<li a href="#">Orange</a></li>
 					<li a href="#">Vit</a></li>
 					</ul>

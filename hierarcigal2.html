@@ -8,6 +8,7 @@
 		body{
 		background-image: url("midsommarros.jpg");
 		margin:0;
+		background-size:cover;
 	}
 	
 	.navbar{
@@ -29,8 +30,11 @@
 	font:bold 12px/18px sans-serif;
 	display:inline-block;
 	position:relative;
-	padding:25px 20px;
-	background-color:white;
+	padding:15px 20px;
+	-webkit-transition:all 0.3s; 
+	-o-transition:all 0.3s; 
+	transition:all 0.3s; 
+	
 	
 	}
 	
@@ -42,17 +46,23 @@
 	}
 	
 	ul li a:hover{
-		background-color:#f3f3f3;
+		background-color:#006064;
+		color:#fff;
+		padding:10px;
+		border-left:5px solid #006064;
+		box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+		
 	}
 	
 	ul li ul{
 	padding:0px;
 	position:absolute;
-	top:70px;
+	top:48px;
 	left:0;
 	width:250px;
 	display:none;
 	box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+	
 	}
 	
 	ul li ul li{
@@ -61,12 +71,23 @@
 	}
 	
 	ul li ul li:hover{
-	background-color:#f3f3f3;
+	background-color:#006064;
+	color:#fff;
+	border-left:5px solid #006064;
+	
 	}
 	
 	ul li:hover ul{
 	display:block;
+	
 	}
+	
+	.active{
+		color:#fff;
+		background:#006064;
+		border-left:5px solid #006064;
+	
+		}
 	
 	ul ul ul li{
 	display:none;
@@ -74,11 +95,32 @@
 	
 	ul ul li:hover li{
 	display:block;
+	border-left:5px solid #006064;
+	
 	}
 	
 	ul ul ul{
 	left:100%;
 	top:0;
+	}
+	
+	i {
+	  border: solid black;
+	  border-width: 0 3px 3px 0;
+	  display: inline-block;
+	  padding: 3px;
+	  margin-left:25px;
+		}
+
+	.fas {
+	  transform: rotate(45deg);
+	  -webkit-transform: rotate(45deg);
+	  
+	}
+	
+	.fas2 {
+	  transform: rotate(-45deg);
+	  -webkit-transform: rotate(-45deg);
 	}
 	</style
 
@@ -93,14 +135,14 @@
 	<li><a href="#">Hem</a>
 	</li>
 
-	<li><a href="#">Blommor&nbsp&#8681</a>
+	<li><a href="#">Blommor<i style='font-size:24px' class='fas'&#xf105;></i></a>
 		<ul>
 		
 			<li><a href="#">Tulpan</a>
 				</li>
 			<li><a href="#">Pion</a>
 				</li>
-			<li><a href="#">Ros&nbsp&#8680</a>
+			<li><a href="#">Ros<i style='font-size:24px' class='fas2'&#xf105;></i></a>
 				<ul>
 					<li><a href="#">Vit ros</a>
 					</li>
