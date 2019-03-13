@@ -36,6 +36,7 @@
 	transition:all 0.3s; 
 	
 	
+	
 	}
 	
 	ul li a{
@@ -46,10 +47,10 @@
 	}
 	
 	ul li a:hover{
-		background-color:#006064;
-		color:#fff;
+		background-color:#4DD0E1;
+		color:#000000;
 		padding:10px;
-		border-left:5px solid #006064;
+		border-left:5px solid #00BCD4;
 		box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
 		
 	}
@@ -71,9 +72,9 @@
 	}
 	
 	ul li ul li:hover{
-	background-color:#006064;
-	color:#fff;
-	border-left:5px solid #006064;
+	background-color:#4DD0E1;
+	color:#000000;
+	
 	
 	}
 	
@@ -82,10 +83,14 @@
 	
 	}
 	
+	.blom li{
+	border-bottom:1px dotted #00BCD4; 
+	}
+	
 	.active{
-		color:#fff;
-		background:#006064;
-		border-left:5px solid #006064;
+		color:#000000;
+		background:##4DD0E1;
+		
 	
 		}
 	
@@ -95,7 +100,8 @@
 	
 	ul ul li:hover li{
 	display:block;
-	border-left:5px solid #006064;
+	border-left:5px solid #00838F;
+	box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
 	
 	}
 	
@@ -130,12 +136,13 @@
 	<div class="navbar">
 	  <nav>
 
-	<ul>
+	<ul class="blom">
 
 	<li><a href="#">Hem</a>
 	</li>
 
 	<li><a href="#">Blommor<i style='font-size:24px' class='fas'&#xf105;></i></a>
+		
 		<ul>
 		
 			<li><a href="#">Tulpan</a>
@@ -143,7 +150,7 @@
 			<li><a href="#">Pion</a>
 				</li>
 			<li><a href="#">Ros<i style='font-size:24px' class='fas2'&#xf105;></i></a>
-				<ul>
+				<ul class="blomsort">
 					<li><a href="#">Vit ros</a>
 					</li>
 					<li><a href="#">Gul ros</a>
@@ -164,9 +171,9 @@
 	</li>
 	<li><a href="#">Kontakt</a>
 	</li>
-
+	
 	</ul>
-
+		</div>
 	</nav>
 	
 	</body>
