@@ -1,14 +1,15 @@
-<! DOCTYPE html> 
+<!DOCTYPE html> 
 <html> 
-  <head > 
+  <head> 
     <title > Blomsterhandel </title > 
 	<meta charset="UTF-8">
 	
 	<style>
 		body{
-		background-image: url("midsommarros.jpg");
+		background-color:#006064;
 		margin:0;
 		background-size:cover;
+		z-index: -1;
 	}
 	
 	.navbar{
@@ -63,7 +64,7 @@
 	width:250px;
 	display:none;
 	box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
-	
+	z-index: 1;
 	}
 	
 	ul li ul li{
@@ -128,9 +129,39 @@
 	  transform: rotate(-45deg);
 	  -webkit-transform: rotate(-45deg);
 	}
-	</style
+	
+		#rosarosen{
+		display: block;
+		margin-left:500px;
+		margin-top:10px;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#rubrik1{
+		text-align: center;
+		color:#fff;
+		font-family:"Verdana";
+		font-size:18px;
+		}
+		
+		#bildtext{
+		
+		  width:270px;
+		  height:130px;
+		  padding:10px;
+		  position:absolute;
+		  border:5px solid #00E5FF;
+		  margin-left:500px;
+		  margin-top:255px;
+		  color:#fff;
+		  font-family:"Verdana";
+		  font-style: italic;
+		  z-index: -1;
+		}
+	</style>
 
-  </head > 
+  </head> 
   <body > 
     
 	<div class="navbar">
@@ -155,11 +186,11 @@
 					</li>
 					<li><a href="#">Gul ros</a>
 					</li>
-					<li><a href="rödroshierarc.html">Röd ros</a>
+					<li><a href="#">Röd klätterros</a>
 					</li>
-					<li><a href="rosaros.html">Rosa Jungfruros</a>
+					<li><a href="#">Rosa ros</a>
 					</li>
-					<li><a href="midsomroshierarc.html">Midsommarros</a>
+					<li><a href="#">Japansk klätterros</a>
 					</li>
 				</ul>
 				</li>
@@ -176,5 +207,9 @@
 		</div>
 	</nav>
 	
+			<h2 id="rubrik1">Rosa Jungfruros</h2>
+			<div id="bildtext">Jungfrurosor kom till västvärlden troligen från Italien. Många sorter är så gamla och 
+			sällsynta att de inte har något namn fastän de växer i äldre trädgårdar efter flera generationer (Wikipedia 2019). </div>
+<img src="rosaros.jpg" id="rosarosen" alt="rosarosen" style="width:300px;height:250px;">
 	</body>
   </html>
