@@ -1,0 +1,224 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title > Blomsterhandel </title > 
+	<meta charset="UTF-8">
+	
+	<style>
+		body{
+		background-color:#006064;
+		margin:0;
+		background-size:cover;
+		z-index: -1;
+	}
+	
+	.navbar{
+	width:100%;
+	background-color:#B2EBF2;
+	box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+	
+	}
+	
+	ul{
+	text-align:left;
+	display:inline;
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+	
+	ul li{
+	font:bold 12px/18px sans-serif;
+	display:inline-block;
+	position:relative;
+	padding:15px 20px;
+	-webkit-transition:all 0.3s; 
+	-o-transition:all 0.3s; 
+	transition:all 0.3s; 
+	
+	
+	
+	}
+	
+	ul li a{
+	text-decoration:none;
+	padding:25px 20px;
+	color:#000000;
+	font-size:18px;
+	}
+	
+	ul li a:hover{
+		background-color:#4DD0E1;
+		color:#000000;
+		padding:10px;
+		border-left:5px solid #00BCD4;
+		box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+		
+	}
+	
+	ul li ul{
+	padding:0px;
+	position:absolute;
+	top:48px;
+	left:0;
+	width:250px;
+	display:none;
+	box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+	z-index: 1;
+	}
+	
+	ul li ul li{
+	background:#B2EBF2;
+	display:block;
+	}
+	
+	ul li ul li:hover{
+	background-color:#4DD0E1;
+	color:#000000;
+	
+	
+	}
+	
+	ul li:hover ul{
+	display:block;
+	
+	}
+	
+	.blom li{
+	border-bottom:1px dotted #00BCD4; 
+	}
+	
+	.active{
+		color:#000000;
+		background:##4DD0E1;
+		
+	
+		}
+	
+	ul ul ul li{
+	display:none;
+	}
+	
+	ul ul li:hover li{
+	display:block;
+	border-left:5px solid #00BCD4;;
+	box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+	
+	}
+	
+	ul ul ul{
+	left:100%;
+	top:0;
+	}
+	
+	i {
+	  border: solid black;
+	  border-width: 0 3px 3px 0;
+	  display: inline-block;
+	  padding: 3px;
+	  margin-left:25px;
+		}
+
+	.fas {
+	  transform: rotate(45deg);
+	  -webkit-transform: rotate(45deg);
+	  
+	}
+	
+	.fas2 {
+	  transform: rotate(-45deg);
+	  -webkit-transform: rotate(-45deg);
+	}
+	
+		#pioner{
+		display: block;
+		margin-left:500px;
+		margin-top:15px;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#rubrik1{
+		text-align: center;
+		color:#fff;
+		font-family:"Verdana";
+		font-size:18px;
+		}
+		
+		#bildtext{
+		
+		  width:270px;
+		  height:255px;
+		  padding:10px;
+		  position:absolute;
+		  border:5px solid #00E5FF;
+		  margin-left:200px;
+		  margin-top:1px;
+		  color:#fff;
+		  font-family:"Verdana";
+		  font-style: italic;
+		  z-index: -1;
+		}
+	</style>
+
+  </head> 
+  <body > 
+    
+	<div class="navbar">
+	  <nav>
+
+	<ul class="blom">
+
+	<li><a href="hierarcigal2.html">Hem</a>
+	</li>
+
+	<li><a href="#">Blommor<i style='font-size:24px' class='fas'&#xf105;></i></a>
+		
+		<ul>
+		
+			<li><a href="#">Tulpan</a>
+				<ul>
+					<li><a href="tulpan.html">Laura Fygi tulpan</a>
+					</li>
+					<li><a href="frastulpan.html">Frastulpan</a>
+					</li>
+					<li><a href="flortulp.html">Tulip Florensky</a>
+					</li>
+				</ul>
+				</li>
+			<li><a href="pion.html">Pion</a>
+				</li>
+			<li><a href="#">Ros<i style='font-size:24px' class='fas2'&#xf105;></i></a>
+				<ul class="blomsort">
+					<li><a href="floribunda.html">Floribundaros</a>
+					</li>
+					<li><a href="vresros.html">Vresros</a>
+					</li>
+					<li><a href="rodroshierarc.html">Röd klätterros</a>
+					</li>
+					<li><a href="rosaros.html">Rosa Jungfruros</a>
+					</li>
+					<li><a href="midsomroshierarc.html">Klätterros</a>
+					</li>
+				</ul>
+				</li>
+			<li><a href="#">Nejlika</a>
+				</li>
+		</ul>
+	</li>
+	<li><a href="#">Festhögtid</a>
+	</li>
+	<li><a href="#">Kontakt</a>
+	</li>
+	
+	</ul>
+		</div>
+	</nav>
+	
+			<h2 id="rubrik1">Pion</h2>
+			<div id="bildtext">Buskpion eller trädpion (Paeonia Suffruticosa-gruppen) är en grupp i familjen pionväxter som innehåller 
+			hybrider med komplext ursprung. Dessa är vanligen mer eller mindre fylldblommiga och har till stor del utvecklats i Kina, 
+			Japan och Vietnam. Arten är endogen i Kina, där den anses vara landets nationalblomma och den odlas särskilt mycket i Luoyang (Wikipedia 2019). </div>
+<img src="piooni2.jpg" id="pioner" alt="pion" style="width:450px;height:450px;">
+	</body>
+  </html>
