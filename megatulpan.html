@@ -13,7 +13,7 @@
 	}
 	
 	body{
-	background-image: url("midsommarrosen.jpg");
+	background-color:#006064;
 	background-size:cover;
 	z-index: -1;
 	min-width:1000px;
@@ -74,6 +74,7 @@
 		margin-top:44px;
 		padding:10px;
 		height:260px;
+		
 		line-height:50px;
 		color:#000000;
 		background:#B2EBF2;
@@ -82,10 +83,6 @@
 		box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
 		font-family:"Verdana";
 				
-		}
-		
-		.submenu h3{
-		padding-left:25px;
 		}
 		.submenulist{
 		width:75px;
@@ -98,24 +95,14 @@
 		
 		
 		}
-		.submenulist li a{
+		.submenulist li{
 		font:12px/18px sans-serif; 
 		font-family:"Arial";
 		font-size:18px;
 		display:block;
 		line-height:30px;
-		float:none;
 		
-		}
 		
-		ul li:hover .submenulist li a{
-		background-color:#069;
-		color:#fff;
-		}
-		
-		ul ul li:hover .submenulist li a{
-		color:#fff;
-		font-weight:bold;
 		}
 		
 		
@@ -130,7 +117,13 @@
 		border-left:5px solid #00BCD4;
 		}
 		
-	
+		.submenulist li:hover{
+			background:#4DD0E1;
+			color:#000000;
+			padding:2px;
+			border-left:5px solid #00BCD4;
+			box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+			}
 			
 			i {
 	  border: solid black;
@@ -152,50 +145,78 @@
 	  -webkit-transform: rotate(-45deg);
 	}
 		
+		#tulip{
+		display: block;
+		margin-left:500px;
+		margin-top:50px;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#rubrik{
+		text-align: center;
+		color:#fff;
+		font-family:"Verdana";
+		font-size:18px;
+		margin-top:15px;
+		}
+		
+		#bildtext{
+		
+		  width:270px;
+		  height:200px;
+		  padding:10px;
+		  position:absolute;
+		  border:5px solid #00E5FF;
+		  margin-left:200px;
+		  margin-top:50px;
+		  color:#fff;
+		  font-family:"Verdana";
+		  font-style: italic;
+		  z-index: -1;
+		}
 		
 		
 		</style>
 
   </head> 
   <body> 
-    
- 
-	<nav>
+  <nav>
 		
 		<ul>
-			<li id="hem"><a href="megameny5.html">Hem</a></li>
+			<li id="hem"><a href="#">Hem</a></li>
 			<li><a href="#">Blommor<i style='font-size:24px' class='fas'&#xf105;></i></a>
 				<div class="submenu">
 					<ul class="submenulist">
 					<h3>Tulpaner</h3>
-					<li a href="megatulpan.html">Laura Fygi</a></li>
-					<li a href="megafras.html">Frastulpan</a></li>
-					<li a href="megatulp.html">Florenskyi</a></li>
+					<li a href="#">Laura Fygi</a></li>
+					<li a href="#">Frastulpan</a></li>
+					<li a href="#">Florenskyi</a></li>
 					</ul>
 					<ul class="submenulist">
 					<h3>Rosor</h3>
-					<li a href="megafloribunda.html">Floribundaros</a></li>
-					<li a href="megavresros.html">Vresros</a></li>
-					<li a href="megarodros.html">Röd ros<i style='font-size:24px' class='fas2'&#xf105;></i></a></li>
-					<li a href="megarosar.html">Jungfruros</a></li>
-					<li a href="megamidsomros.html">Klätterros</a></li>
+					<li a href="#">Floribundaros</a></li>
+					<li a href="#">Vresros</a></li>
+					<li a href="#">Röd ros<i style='font-size:24px' class='fas2'&#xf105;></i></a></li>
+					<li a href="#">Jungfruros</a></li>
+					<li a href="#">Klätterros</a></li>
 					</ul>
 					<ul class="submenulist">
 					<h3>Pion</h3>
-					<li a href="megapion.html">Buskpion</a></li>
+					<li a href="#">Buskpion</a></li>
 					</ul>
 					<ul class="submenulist">
 					<h3>Solros</h3>
-					<li a href="megasolros.html">Solros</a></li>
+					<li a href="#">Solros</a></li>
 					</ul>
 					</div>
 					</li>
 					
-			<li><a href="megafest.html">Festhögtid</a>
+			<li><a href="#">Festhögtid</a>
 				
 			</li>
 			
-			<li><a href="megakontakt.html">Kontakt</a></li>
+			<li><a href="#">Kontakt</a></li>
 			</ul>
 			
 		
@@ -204,7 +225,11 @@
 		
 			
 	</nav>
-	
+			<h2 id="rubrik">Laura Fygi tulpan</h2>
+			<div id="bildtext">Tulpan eller trädgårdstulpan (Tulipa gesneriana[1]) (från persiskans dolband) är en växt i familjen liljeväxter. 
+			Arten har oklart ursprung, möjligen kommer den från Iran och har naturaliserats i sydvästra Europa de flesta odlingsformerna av tulpan 
+			härstammar från denna art (Wikipedia 2019). </div>
+				<img src="tulpan.jpg" id="tulip" alt="tulpan" style="width:450px;height:450px;">
 			
 	</body>
   </html>

@@ -13,7 +13,7 @@
 	}
 	
 	body{
-	background-image: url("midsommarrosen.jpg");
+	background-color:#006064;
 	background-size:cover;
 	z-index: -1;
 	min-width:1000px;
@@ -74,6 +74,7 @@
 		margin-top:44px;
 		padding:10px;
 		height:260px;
+		
 		line-height:50px;
 		color:#000000;
 		background:#B2EBF2;
@@ -82,10 +83,6 @@
 		box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
 		font-family:"Verdana";
 				
-		}
-		
-		.submenu h3{
-		padding-left:25px;
 		}
 		.submenulist{
 		width:75px;
@@ -98,24 +95,14 @@
 		
 		
 		}
-		.submenulist li a{
+		.submenulist li{
 		font:12px/18px sans-serif; 
 		font-family:"Arial";
 		font-size:18px;
 		display:block;
 		line-height:30px;
-		float:none;
 		
-		}
 		
-		ul li:hover .submenulist li a{
-		background-color:#069;
-		color:#fff;
-		}
-		
-		ul ul li:hover .submenulist li a{
-		color:#fff;
-		font-weight:bold;
 		}
 		
 		
@@ -130,7 +117,13 @@
 		border-left:5px solid #00BCD4;
 		}
 		
-	
+		.submenulist li:hover{
+			background:#4DD0E1;
+			color:#000000;
+			padding:2px;
+			border-left:5px solid #00BCD4;
+			box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+			}
 			
 			i {
 	  border: solid black;
@@ -152,15 +145,43 @@
 	  -webkit-transform: rotate(-45deg);
 	}
 		
+		#frastulp{
+		display: block;
+		margin-left:500px;
+		margin-top:50px;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#rubrik{
+		text-align: center;
+		color:#fff;
+		font-family:"Verdana";
+		font-size:18px;
+		margin-top:15px;
+		}
+		
+		#bildtext{
+		
+		  width:270px;
+		  height:200px;
+		  padding:10px;
+		  position:absolute;
+		  border:5px solid #00E5FF;
+		  margin-left:200px;
+		  margin-top:50px;
+		  color:#fff;
+		  font-family:"Verdana";
+		  font-style: italic;
+		  z-index: -1;
+		}
 		
 		
 		</style>
 
   </head> 
   <body> 
-    
- 
-	<nav>
+  <nav>
 		
 		<ul>
 			<li id="hem"><a href="megameny5.html">Hem</a></li>
@@ -204,7 +225,11 @@
 		
 			
 	</nav>
-	
+			<h2 id="rubrik">Frastulpan</h2>
+			<div id="bildtext">Tulpan eller trädgårdstulpan (Tulipa gesneriana[1]) (från persiskans dolband) är en växt i familjen liljeväxter. 
+			Arten har oklart ursprung, möjligen kommer den från Iran och har naturaliserats i sydvästra Europa de flesta odlingsformerna av tulpan 
+			härstammar från denna art (Wikipedia 2019). </div>
+				<img src="frastulip.jpg" id="frastulp" alt="frastulpan" style="width:450px;height:450px;">
 			
 	</body>
   </html>
