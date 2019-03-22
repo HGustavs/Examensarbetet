@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("midsommarrosen.jpg");
+  background-size:cover;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:#B2EBF2;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color:#000000;
+  text-align: center;
+  padding: 14px 35px 14px 40px;
+  text-decoration: none;
+}
+
+h3{
+margin-left:15px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color:#000000;
+  padding: 14px 14px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#4DD0E1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#B2EBF2;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 16px;
+  color:#000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background-color:#B2EBF2;
+  height:320px;
+}
+
+.column a {
+  float: none;
+  color:#000000;
+  padding:16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color:#4DD0E1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Blommor 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     
+        
+      
+      <div class="row">
+        <div class="column">
+          <h3>Tulpaner</h3>
+          <a href="#">Laura Fygi</a>
+          <a href="#">Frastulpan</a>
+          <a href="#">Florenskyi</a>
+        </div>
+        <div class="column">
+          <h3>Rosor</h3>
+          <a href="#">Foribundaros</a>
+          <a href="#">Vresros</a>
+          <a href="#">Röd ros</a>
+		  <a href="#">Jungfruros</a>
+          <a href="#">Klätterros</a>
+        </div>
+        <div class="column">
+          <h3>Pion</h3>
+          <a href="#">Buskpion</a>
+        </div>
+		<div class="column">
+          <h3>Solros</h3>
+          <a href="#">Solros</a>
+         </div>
+      </div>
+    </div>
+  </div>
+  <a href="#news">Festhögtid</a>
+  <a href="#news">Kontakt</a>
+</div>
+
+
+
+</body>
+</html>
