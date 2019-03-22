@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("midsommarrosen.jpg");
+  background-size:cover;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:#B2EBF2;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width:170px;
+  height:300px;
+  line-height:45px;
+  margin-left:5px;
+  margin-top:5px;
+}
+
+.navbar a {
+  
+  font-size: 16px;
+  color:#000000;
+  text-align: center;
+  padding:15px 20px 0 15px;
+  text-decoration: none;
+  margin:10px;
+  line-height:5px;
+}
+
+h3{
+margin-left:15px;
+margin-top:5px;
+}
+
+.dropdown {
+  display:block;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color:#000000;
+  padding: 14px 14px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#4DD0E1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#B2EBF2;
+  width: 100%;
+  left:170px;
+  top:50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 16px;
+  color:#000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  background-color:#B2EBF2;
+  height:320px;
+}
+
+.column a {
+  float: none;
+  color:#000000;
+  padding:16px;
+  text-decoration: none;
+  display: block;
+  text-align:left;
+  line-height:10px;
+}
+
+.column a:hover {
+  background-color:#4DD0E1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+i {
+	  border: solid black;
+	  border-width: 0 2px 2px 0;
+	  display: inline-block;
+	  padding: 4px;
+	  margin-left:25px;
+	
+		}
+
+	.fas {
+	  transform: rotate(-45deg);
+	  -webkit-transform: rotate(-45deg);
+	  
+	}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="megameny7.html">Home<i style='font-size:24px' class='fas'&#xf105;></i></a>
+  <div class="dropdown">
+    <button class="dropbtn">Blommor 
+	<i style='font-size:24px;margin-left:25px' class='fas'&#xf105;></i>
+    </button>
+    <div class="dropdown-content">
+     
+        
+      
+      <div class="row">
+        <div class="column">
+          <h3>Tulpaner</h3>
+          <a href="megatulpan.html">Laura Fygi</a>
+          <a href="megafras.html">Frastulpan</a>
+          <a href="megatulp.html">Florenskyi</a>
+        </div>
+        <div class="column">
+          <h3>Rosor</h3>
+          <a href="megafloribunda.html">Foribundaros</a>
+          <a href="megavresros.html">Vresros</a>
+          <a href="megarodros.html">Röd ros</a>
+		  <a href="megarosar.html">Jungfruros</a>
+          <a href="megamidsomros.html">Klätterros</a>
+        </div>
+        <div class="column">
+          <h3>Pion</h3>
+          <a href="megapion.html">Buskpion</a>
+        </div>
+		<div class="column">
+          <h3>Solros</h3>
+          <a href="megasolros.html">Solros</a>
+         </div>
+      </div>
+    </div>
+  </div>
+  <a href="megafest.htm">Festhögtid<i style='font-size:24px' class='fas'&#xf105;></i></a>
+  
+  <a href="megakontakt.html">Kontakt<i style='font-size:24px;margin-top:30px;'class='fas'&#xf105;></i></a>
+</div>
+
+
+
+</body>
+</html>
