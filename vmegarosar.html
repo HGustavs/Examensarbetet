@@ -2,17 +2,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 	* {
 	  box-sizing: border-box;
 	}
 
-	body {
+	  body {
 	  margin: 0;
-	  background-image: url("midsommarrosen.jpg");
+	  background-color:#006064;
 	  background-size:cover;
-	}
+		}
 
 	.navbar {
 	  overflow: hidden;
@@ -144,6 +144,37 @@
 	  -webkit-transform: rotate(-45deg);
 	  
 	}
+	
+		#rosarosen{
+		display: block;
+		margin-left:600px;
+		margin-top:5px;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#rubrik{
+		text-align: center;
+		color:#fff;
+		font-family:"Verdana";
+		font-size:18px;
+		margin-top:-120px;
+		}
+		
+		#bildtext{
+		
+		  width:270px;
+		  height:200px;
+		  padding:10px;
+		  position:absolute;
+		  border:5px solid #00E5FF;
+		  margin-left:300px;
+		  margin-top:1px;
+		  color:#fff;
+		  font-family:"Verdana";
+		  font-style: italic;
+		  z-index: -1;
+		}
 	</style>
 	</head>
 	<body>
@@ -189,8 +220,10 @@
 	  <a href="megakontakt.html">Kontakt<i style='font-size:24px'class='fas'&#xf105;></i></a>
 	</div>
 
-	<h3 style="background-color:#FFF3E0; color:#000000; margin-left:450px; width:25%; height:40px; text-align:center; 
-			padding-top:10px; font-size:20px; font-weight:bold; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);">Välkommen till Fin Flora</h3>
+	<h2 id="rubrik">Rosa Jungfruros</h2>
+			<div id="bildtext">Jungfrurosor kom till västvärlden troligen från Italien. Många sorter är så gamla och 
+			sällsynta att de inte har något namn fastän de växer i äldre trädgårdar efter flera generationer (Wikipedia 2019). </div>
+				<img src="rosaros.jpg" id="rosarosen" alt="rosarosen" style="width:450px;height:450px;">
 
 </body>
 </html>

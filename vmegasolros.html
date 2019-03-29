@@ -2,17 +2,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 	* {
 	  box-sizing: border-box;
 	}
 
-	body {
+	  body {
 	  margin: 0;
-	  background-image: url("midsommarrosen.jpg");
+	  background-color:#006064;
 	  background-size:cover;
-	}
+		}
 
 	.navbar {
 	  overflow: hidden;
@@ -99,7 +99,7 @@
 
 	/* Create three equal columns that floats next to each other */
 	.column {
-	  float:left;
+	  float: left;
 	  padding:5px;
 	  background-color:#B2EBF2;
 	  height:300px;
@@ -144,6 +144,37 @@
 	  -webkit-transform: rotate(-45deg);
 	  
 	}
+	
+		#aurinkoku{
+		display: block;
+		margin-left:600px;
+		margin-top:5px;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#rubrik{
+		text-align: center;
+		color:#fff;
+		font-family:"Verdana";
+		font-size:18px;
+		margin-top:-120px;
+		}
+		
+		#bildtext{
+		
+		  width:270px;
+		  height:330px;
+		  padding:10px;
+		  position:absolute;
+		  border:5px solid #00E5FF;
+		  margin-left:300px;
+		  margin-top:1px;
+		  color:#fff;
+		  font-family:"Verdana";
+		  font-style: italic;
+		  z-index: -1;
+		}
 	</style>
 	</head>
 	<body>
@@ -189,8 +220,11 @@
 	  <a href="megakontakt.html">Kontakt<i style='font-size:24px'class='fas'&#xf105;></i></a>
 	</div>
 
-	<h3 style="background-color:#FFF3E0; color:#000000; margin-left:450px; width:25%; height:40px; text-align:center; 
-			padding-top:10px; font-size:20px; font-weight:bold; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);">Välkommen till Fin Flora</h3>
-
+	<h2 id="rubrik">Solros</h2>
+				<div id="bildtext">Solros (Helianthus annuus) är en art inom familjen korgblommiga växter. Den har upp till 3 meter höga stänglar 
+					med gula blommor. Växten som har sitt ursprung i södra och sydöstra USA odlas över stora delar av världen som prydnadsväxt 
+					eller för kommersiell framställning av solrosolja och solrosfrön (Wikipedia 2019). </div>
+						<img src="solros.jpg" id="aurinkoku" alt="solrosor" style="width:450px;height:450px;">
+			
 </body>
 </html>
