@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+	<html> 
 		<head > 
 			<title > Blomsterhandel </title > 
 				<meta charset="UTF-8">
@@ -14,7 +14,7 @@
 		body{
 	  background-color:#006064;
 	  background-size:cover;
-	  margin:50px;
+	  margin:20px;
 	  min-width:1000px;
 		z-index: -1;
 		}
@@ -36,6 +36,7 @@
 			-o-transition:all 0.3s; 
 			transition:all 0.3s; 
 			border-left:5px solid #00BCD4;
+			z-index:0;
 			
 		}
 		#nav li a{
@@ -50,6 +51,10 @@
 		}
 		
 		#blom{
+			border-left:1px solid #B2EBF2;
+		}
+		
+		.tulip{
 			border-left:1px solid #B2EBF2;
 		}
 		#nav li a:hover{
@@ -106,35 +111,77 @@
 		border-left:5px solid #00BCD4;
 		}
 		
-		#midros{
+		#pkakkara{
 		display: block;
-		margin-left:600px;
-		margin-top:5px;
+		margin-left:500px;
+		margin-top:50px;
 		width: 40%;
 		z-index: -1;
 		}
 		
-		#rubrik{
-		text-align: center;
-		color:#fff;
-		font-family:"Verdana";
-		font-size:18px;
-		margin-top:-120px;
+		#pioner{
+		display:inline-block;
+		margin-left:270px;
+		margin-top:50px;
+		width: 40%;
+		z-index: -1;
 		}
+		
+		#bloms{
+		display:inline-block;
+		margin-left:0px;
+		margin-top:50;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#tulp{
+		display:inline-block;
+		margin-left:0px;
+		margin-top:50;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#ruusu{
+		display:inline-block;
+		margin-left:0px;
+		margin-top:30;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		#solr{
+		display:inline-block;
+		margin-left:0px;
+		margin-top:30;
+		width: 40%;
+		z-index: -1;
+		}
+		
+		
 		
 		#bildtext{
 		
-		  width:270px;
-		  height:200px;
+		  width:150px;
+		  height:150px;
 		  padding:10px;
 		  position:absolute;
 		  border:5px solid #00E5FF;
-		  margin-left:300px;
-		  margin-top:1px;
+		  margin-left:80px;
+		  margin-top:50px;
 		  color:#fff;
 		  font-family:"Verdana";
 		  font-style: italic;
 		  z-index: -1;
+		}
+		
+		#rubrik1{
+		text-align: center;
+		color:#fff;
+		font-family:"Verdana";
+		font-size:18px;
+		margin-top:30px;
 		}
 </style>
 
@@ -145,24 +192,25 @@
 		<li><a href="vertical3.html">Hem<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
 		<li><a href="#">Blommor<i style='font-size:24px' class='fas'&#xf105;></i></a>
 			<ul id="blom">
+					
+					
 					<li><a href="#">Tulpan<i style='font-size:24px' class='fas'&#xf105;></i></a>
-					<ul class="tulip">
+						<ul class="tulip">
 								<li><a href="vert3tulpan.html">Laura Fygi<i style='font-size:24px' class='fas'&#xf105;></i></a>
 								</li>
 								<li><a href="vert3fras.html">Frastulpan<i style='font-size:24px' class='fas'&#xf105;></i></a>
 								</li>
-								<li><a href="vert3tulip.html">Florenskyi<i style='font-size:24px' class='fas'&#xf105;></i></a>
+								<li><a href="vert3tulp.html">Florenskyi<i style='font-size:24px' class='fas'&#xf105;></i></a>
 								</li>
 							</ul>
 					</li>
-					
 					<li><a href="#">Ros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 						<ul>
 							<li><a href="vert3floribunda.html">Floribundaros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
 							<li><a href="vert3vres.html">Vresros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
-							<li><a href="vert3rodros.html">Röd ros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3rodros.html">Röd klätterros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
 							<li><a href="vert3rosa.html">Jungfruros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
@@ -180,11 +228,15 @@
 		<li><a href="vert3kontakt.html">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
 		</ul>
 	
-		<h2 id="rubrik">Japansk klätterros</h2>
-			<div id="bildtext">Japansk klätterros (Rosa multiflora), är en art i familjen rosväxter som förekommer i Kina, Korea och Japan. 
-			Blommorna sitter i greninga kvastar och har en fruktlik doft (Wikipedia 2019). </div>
-				<img src="midsommarrosen.jpg" id="midros" alt="midsommarros" style="width:450px;height:450px;">
+		<h2 id="rubrik1">Festhögtid</h2>
+						<div id="bildtext">Välj önskad blomma till vardag eller fest!</div>
+				<img src="piooni2.jpg" id="pioner" alt="pion" style="width:150px;height:150px;">
+				<img src="florenskyi.jpg" id="bloms" alt="florensky" style="width:150px;height:150px;">
+				<img src="tulpan.jpg" id="tulp" alt="tulpan" style="width:150px;height:150px;">
+				<img src="rödros.jpg" id="ruusu" alt="ros" style="width:150px;height:150px;">
+				<img src="solros.jpg" id="solr" alt="solros" style="width:150px;height:150px;">
 	
+		
 	
 	</body>
   </html>
