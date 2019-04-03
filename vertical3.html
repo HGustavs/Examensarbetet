@@ -51,11 +51,10 @@
 		
 		#blom{
 			border-left:1px solid #B2EBF2;
+			position: fixed;
 		}
 		
-		.tulip{
-			border-left:1px solid #B2EBF2;
-		}
+		
 		#nav li a:hover{
 			 background:#4DD0E1; color:#000000; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
 		}
@@ -86,13 +85,13 @@
 			display:block;
 		}
 		
-		i {
+		<!---i {
 	  border: solid black;
 	  border-width: 0 2px 2px 0;
 	  display: inline-block;
 	  padding: 3px;
 	  margin-left:55px;
-		}
+		}-->
 
 	.fas {
 	  transform: rotate(45deg);
@@ -104,36 +103,100 @@
 	  transform: rotate(-45deg);
 	  -webkit-transform: rotate(-45deg);
 	}
-		.active{
-		color:#000000;
-		background:##4DD0E1;
-		border-left:5px solid #00BCD4;
+		
+		
+		.caret {
+		  cursor: pointer;
+		  <!---webkit-user-select: none; /* Safari 3.1+ */
+		  -moz-user-select: none; /* Firefox 2+ */-->
+		  -ms-user-select: none; /* IE 10+ */
+		  user-select: none;
 		}
+
+		.caret::before {
+		  content: "\25B6";
+		  color: black;
+		  display:block;
+		  
+		}
+
+		.caret-down::before {
+		  -ms-transform: rotate(90deg); /* IE 9 */
+		  -webkit-transform: rotate(90deg); /* Safari */'
+		  transform: rotate(90deg);  
+		}
+		
+		
+		#nested{
+		display:none;
+		}
+		
+		#nested.active {
+			  display:block;
+			  
+			}
+
+			
 		
 </style>
 
+		<script>
+		
+		 function klickad(event)
+	{			var current.nodeName;
+                var lielem=event.target.parentElement;
+                var current=lielem.nextSibling;
+                while(current!=null && current.nodeName!="LI"){
+                                current=current.nextSibling;
+                }       
+                if(current.nodeName=="LI"){
+				
+                                var list=current.querySelectorAll("nested");
+								alert("Hej");
+                                for(i=0;i<list.length;i++){
+												
+                                                alert(list[i].style.display);
+                                                if(list[i].style.display != "block"){
+                                                          list[i].style.display="block";
+                                                }else {
+                                                          list[i].style.display="none";                                                   
+                                                }
+                                }
+                }
+	}
+		
+		/*var document;
+		document.getElementById("menu").addEventListener("click", openMenu()){
+		document.getElementById("nested").innerHTML = ("menu");
+		}
+
+			function openMenu(){
+			document.getElementById("nested").classList.toggle("active");
+			}*/
+		</script>
+
   </head > 
-  <body > 
+  <body> 
     
   		<ul id="nav">
-		<li><a href="vertical3.html">Hem<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
-		<li><a href="#">Blommor<i style='font-size:24px' class='fas'&#xf105;></i></a>
+		<li><a href="vertical3.html">Hem</a></li>
+		<li><button onclick="klickad(event)">Try it</button><a href="#">Blommor</a>
 			<ul id="blom">
 					
-					<li><a href="#">Tulpan<i style='font-size:24px' class='fas'&#xf105;></i></a>
-						<ul class="tulip">
-								<li><a href="vert3tulpan.html">Laura Fygi<i style='font-size:24px' class='fas'&#xf105;></i></a>
+					<li id="menu"><a href="#"><button onclick="klickad(event)">Tulpan</button></a>
+						<ul id= "nested">
+								<li><a href="vert3tulpan.html">Laura Fygi</a>
 								</li>
-								<li><a href="vert3fras.html">Frastulpan<i style='font-size:24px' class='fas'&#xf105;></i></a>
+								<li><a href="vert3fras.html">Frastulpan<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
 								</li>
-								<li><a href="vert3tulip.html">Florenskyi<i style='font-size:24px' class='fas'&#xf105;></i></a>
+								<li><a href="vert3tulip.html">Florenskyi<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
 								</li>
-							</ul>
+						</ul>
 					</li>
 					
-					<li><a href="#">Ros<i style='font-size:24px' class='fas'&#xf105;></i></a>
-						<ul>
-							<li><a href="vert3floribunda.html">Floribundaros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+					<li><a href="#"><span class="caret">Ros</span></a>
+						<ul id="nested">
+							<li><a href="vert3floribunda.html">Floribundaros<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
 							</li>
 							<li><a href="vert3vres.html">Vresros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
@@ -159,7 +222,7 @@
 	
 	<h3 style="background-color:#FFF3E0; color:#000000; margin-left:450px; width:25%; height:30px; text-align:center; position:fixed; 
 			padding-top:10px; font-size:18px; font-family: Verdana, sans-serif; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);">
-			Välkommen till Fin Flora</h3>
+			Välkommen till Finn Flora</h3>
 	
 	
 	</body>
