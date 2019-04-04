@@ -8,118 +8,124 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background-color:#006064;
-  background-size:cover;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color:#B2EBF2;
-  font-family:Verdana;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  -webkit-transition:all 0.3s; 
-	  -o-transition:all 0.3s; 
-	   transition:all 0.3s; 
-}
-
-.navbar a {
-  float: left;
-  font:bold 18px sans-serif;
-  color:#000000;
-  text-align: center;
-  padding: 14px 35px 14px 40px;
-  text-decoration: none;
-}
-
-h3{
-margin-left:15px;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 18px;  
-  border: none;
-  outline: none;
-  color:#000000;
-  padding: 14px 14px;
-  background-color: inherit;
-  font: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color:#4DD0E1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-left:5px solid #00BCD4; 
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:#B2EBF2;
-  width: 100%;
-  left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  padding: 16px;
-  color:#000000;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background-color:#B2EBF2;
-  height:320px;
-  margin-right:5px;
-  border-right:dotted #00BCD4;
-}
-
-.column a {
-  float: none;
-  color:#000000;
-  padding:16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.column a:hover {
-  background-color:#4DD0E1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-left:5px solid #00BCD4; 
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-i {
-	  border: solid black;
-	  border-width: 0 2px 2px 0;
-	  display: inline-block;
-	  padding: 4px;
-	  margin-left:15px;
-	
+		body {
+		  margin: 0;
+		  background-color:#006064;
+		  background-size:cover;
 		}
+
+		.navbar {
+		  overflow: hidden;
+		  background-color:#B2EBF2;
+		  font-family:Verdana;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  -webkit-transition:all 0.3s; 
+			  -o-transition:all 0.3s; 
+			   transition:all 0.3s; 
+		}
+
+		.navbar a {
+		  float: left;
+		  font:bold 18px sans-serif;
+		  color:#000000;
+		  text-align: center;
+		  padding: 14px 35px 14px 40px;
+		  text-decoration: none;
+		}
+
+		h3{
+		margin-left:15px;
+		}
+
+		.dropdown {
+		  float: left;
+		  overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+		  font-size: 18px;  
+		  border: none;
+		  outline: none;
+		  color:#000000;
+		  padding: 14px 14px;
+		  background-color: inherit;
+		  font: inherit;
+		  margin: 0;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+		  background-color:#4DD0E1;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  border-left:5px solid #00BCD4; 
+		}
+
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color:#B2EBF2;
+		  width: 100%;
+		  left: 0;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		  padding: 16px;
+		  color:#000000;
+		}
+
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+
+		/* Create three equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 20%;
+		  padding: 10px;
+		  background-color:#B2EBF2;
+		  height:320px;
+		  margin-right:5px;
+		  border-right:dotted #00BCD4;
+		}
+
+		.column a {
+		  float: none;
+		  color:#000000;
+		  padding:16px;
+		  text-decoration: none;
+		  display: block;
+		  text-align: left;
+		}
+
+		.column a:hover {
+		  background-color:#4DD0E1;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  border-left:5px solid #00BCD4; 
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		i {
+			  border: solid black;
+			  border-width: 0 2px 2px 0;
+			  display: inline-block;
+			  padding: 4px;
+			  margin-left:15px;
+			
+				}
 
 	.fas {
 	  transform: rotate(45deg);
 	  -webkit-transform: rotate(45deg);
+	  
+	}
+	
+	.fas2 {
+	  transform: rotate(-45deg);
+	  -webkit-transform: rotate(-45deg);
 	  
 	}
 	
@@ -170,25 +176,25 @@ i {
       <div class="row">
         <div class="column">
           <h3>Tulpaner</h3>
-          <a href="megatulpan.html">Laura Fygi</a>
-          <a href="megafras.html">Frastulpan</a>
-          <a href="megatulp.html">Florenskyi</a>
+          <a href="megatulpan.html">Laura Fygi<i style='font-size:24px' class='fas2'&#xf105;></i></a>
+          <a href="megafras.html">Frastulpan<i style='font-size:24px' class='fas2'&#xf105;></i></a>
+          <a href="megatulp.html">Florenskyi<i style='font-size:24px' class='fas2'&#xf105;></i></a>
         </div>
         <div class="column">
           <h3>Rosor</h3>
-          <a href="megafloribunda.html">Foribunda</a>
-          <a href="megavresros.html">Vresros</a>
-          <a href="megapion.html">Röd ros</a>
-		  <a href="megarosar.html">Jungfruros</a>
-          <a href="megamidsomros.html">Schersmin</a>
+          <a href="megafloribunda.html">Floribunda<i style='font-size:24px' class='fas2'&#xf105;></i></a>
+          <a href="megavresros.html">Vresros<i style='font-size:24px' class='fas2'&#xf105;></i></a>
+          <a href="megapion.html">Röd ros<i style='font-size:24px' class='fas2'&#xf105;></i></a>
+		  <a href="megarosar.html">Jungfruros<i style='font-size:24px' class='fas2'&#xf105;></i></a>
+          <a href="megamidsomros.html">Schersmin<i style='font-size:24px' class='fas2'&#xf105;></i></a>
         </div>
         <div class="column">
           <h3>Pion</h3>
-          <a href="megapion.html">Buskpion</a>
+          <a href="megapion.html">Buskpion<i style='font-size:24px' class='fas2'&#xf105;></i></a>
         </div>
 		<div class="column">
           <h3>Solros</h3>
-          <a href="megasolros.html">Solros</a>
+          <a href="megasolros.html">Solros<i style='font-size:24px' class='fas2'&#xf105;></i></a>
          </div>
       </div>
     </div>
