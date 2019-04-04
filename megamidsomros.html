@@ -8,146 +8,151 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background-color:#006064;
-  background-size:cover;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color:#B2EBF2;
-  font-family:Verdana;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.navbar a {
-  float: left;
-  font:bold 18px sans-serif;
-  color:#000000;
-  text-align: center;
-  padding: 14px 35px 14px 40px;
-  text-decoration: none;
-}
-
-h3{
-margin-left:15px;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 18px;  
-  border: none;
-  outline: none;
-  color:#000000;
-  padding: 14px 14px;
-  background-color: inherit;
-  font: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color:#4DD0E1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color:#B2EBF2;
-  width: 100%;
-  left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  padding: 16px;
-  color:#000000;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background-color:#B2EBF2;
-  height:320px;
-  margin-right:5px;
-  border-right:dotted #00BCD4;
-}
-
-.column a {
-  float: none;
-  color:#000000;
-  padding:16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.column a:hover {
-  background-color:#4DD0E1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-i {
-	  border: solid black;
-	  border-width: 0 2px 2px 0;
-	  display: inline-block;
-	  padding: 4px;
-	  margin-left:15px;
-	
-		}
-
-	.fas {
-	  transform: rotate(45deg);
-	  -webkit-transform: rotate(45deg);
-	  
+	body {
+	  margin: 0;
+	  background-color:#006064;
+	  background-size:cover;
 	}
-	
-	
-		#midros{
-		display: block;
-		margin-left:500px;
-		margin-top:15px;
-		width: 40%;
-		z-index: -1;
+
+	.navbar {
+	  overflow: hidden;
+	  background-color:#B2EBF2;
+	  font-family:Verdana;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  -webkit-transition:all 0.3s; 
+		  -o-transition:all 0.3s; 
+		   transition:all 0.3s; 
+	}
+
+	.navbar a {
+	  float: left;
+	  font:bold 18px sans-serif;
+	  color:#000000;
+	  text-align: center;
+	  padding: 14px 35px 14px 40px;
+	  text-decoration: none;
+	}
+
+	h3{
+	margin-left:15px;
+	}
+
+	.dropdown {
+	  float: left;
+	  overflow: hidden;
+	}
+
+	.dropdown .dropbtn {
+	  font-size: 18px;  
+	  border: none;
+	  outline: none;
+	  color:#000000;
+	  padding: 14px 14px;
+	  background-color: inherit;
+	  font: inherit;
+	  margin: 0;
+	}
+
+	.navbar a:hover, .dropdown:hover .dropbtn {
+	  background-color:#4DD0E1;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  border-left:5px solid #00BCD4; 
+	}
+
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color:#B2EBF2;
+	  width: 100%;
+	  left: 0;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	  padding: 16px;
+	  color:#000000;
+	}
+
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+
+	/* Create three equal columns that floats next to each other */
+	.column {
+	  float: left;
+	  width: 20%;
+	  padding: 10px;
+	  background-color:#B2EBF2;
+	  height:320px;
+	  margin-right:5px;
+	  border-right:dotted #00BCD4;
+	}
+
+	.column a {
+	  float: none;
+	  color:#000000;
+	  padding:16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.column a:hover {
+	  background-color:#4DD0E1;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  border-left:5px solid #00BCD4; 
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	i {
+		  border: solid black;
+		  border-width: 0 2px 2px 0;
+		  display: inline-block;
+		  padding: 4px;
+		  margin-left:15px;
+		
+			}
+
+		.fas {
+		  transform: rotate(45deg);
+		  -webkit-transform: rotate(45deg);
+		  
 		}
 		
-		#rubrik{
-		text-align: center;
-		color:#fff;
-		font-family:"Verdana";
-		font-size:18px;
-		}
 		
-		#bildtext{
-		
-		  width:270px;
-		  height:200px;
-		  padding:10px;
-		  position:absolute;
-		  border:5px solid #00E5FF;
-		  margin-left:200px;
-		  margin-top:1px;
-		  color:#fff;
-		  font-family:"Verdana";
-		  font-style: italic;
-		  z-index: -1;
-		}
+			#midros{
+			display: block;
+			margin-left:500px;
+			margin-top:15px;
+			width: 40%;
+			z-index: -1;
+			}
+			
+			#rubrik{
+			text-align: center;
+			color:#fff;
+			font-family:"Verdana";
+			font-size:18px;
+			}
+			
+			#bildtext{
+			
+			  width:270px;
+			  height:330px;
+			  padding:10px;
+			  position:absolute;
+			  border:5px solid #00E5FF;
+			  margin-left:200px;
+			  margin-top:1px;
+			  color:#fff;
+			  font-family:"Verdana";
+			  font-style: italic;
+			  z-index: -1;
+			}
 </style>
 </head>
 <body>
@@ -175,7 +180,7 @@ i {
           <a href="megavresros.html">Vresros</a>
           <a href="megarodros.html">Röd ros</a>
 		  <a href="megarosar.html">Jungfruros</a>
-          <a href="megamidsomros.html">Klätterros</a>
+          <a href="megamidsomros.html">Schersmin</a>
         </div>
         <div class="column">
           <h3>Pion</h3>
@@ -191,9 +196,10 @@ i {
   <a href="megafest.html">Festhögtid<i style='font-size:24px' class='fas'&#xf105;></i></a>
   <a href="megakontakt.html">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a>
 </div>
-		<h2 id="rubrik">Japansk klätterros</h2>
-			<div id="bildtext">Japansk klätterros (Rosa multiflora), är en art i familjen rosväxter som förekommer i Kina, Korea och Japan. 
-			Blommorna sitter i greninga kvastar och har en fruktlik doft (Wikipedia 2019). </div>
+		<h2 id="rubrik">Schersmin</h2>
+			<div id="bildtext">Schersminsläktet (Philadelphus) är ett växtsläkte blommande buskar inom familjen hortensiaväxter med 60 arter. 
+			De är 1-6 meter höga, som regel lövfällande, och växer naturligt i Nordamerika, Asien, och östra Europa. 
+			I Sverige är schersminer vanliga trädgårdsväxter, till exempel doftschersmin och smultronschersmin (Wikipedia 2019). </div>
 				<img src="midsommarrosen.jpg" id="midros" alt="midsommarros" style="width:450px;height:450px;">
 
 
