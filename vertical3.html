@@ -36,6 +36,7 @@
 			-o-transition:all 0.3s; 
 			transition:all 0.3s; 
 			border-left:5px solid #00BCD4;
+			display:block;
 			
 		}
 		#nav li a{
@@ -54,38 +55,18 @@
 			position: fixed;
 		}
 		
-		
-		#nav li a:hover{
-			 background:#4DD0E1; color:#000000; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
-		}
+				
 		#nav li ul{
 			display:none;
 		}
-		#nav li:hover ul{
-			display:block;
-			
-		}
-		#nav li:hover ul li{
-			color:#000000;
-			
-			
-	
-		}
-		#nav li:hover ul li a{
-			color:#000000;
-			
-		}
-		#nav li:hover ul li a:hover{
-			background:#4DD0E1; color:#000000; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12); 
-		}
-		#nav li ul li ul li{
+		
+		
+		
+		<!--#nav li ul li ul li{
 			display:none;
 		}
-		#nav li ul li:hover ul li {
-			display:block;
-		}
 		
-		<!---i {
+		i {
 	  border: solid black;
 	  border-width: 0 2px 2px 0;
 	  display: inline-block;
@@ -105,65 +86,47 @@
 	}
 		
 		
-		.caret {
-		  cursor: pointer;
-		  <!---webkit-user-select: none; /* Safari 3.1+ */
-		  -moz-user-select: none; /* Firefox 2+ */-->
-		  -ms-user-select: none; /* IE 10+ */
-		  user-select: none;
-		}
+		
 
-		.caret::before {
-		  content: "\25B6";
-		  color: black;
-		  display:block;
-		  
-		}
-
-		.caret-down::before {
-		  -ms-transform: rotate(90deg); /* IE 9 */
-		  -webkit-transform: rotate(90deg); /* Safari */'
-		  transform: rotate(90deg);  
-		}
-		
-		
-		#nested{
-		display:none;
-		}
-		
-		#nested.active {
-			  display:block;
-			  
-			}
 
 			
 		
 </style>
 
-		<script>
 		
-		 function klickad(event)
-	{			var current.nodeName;
-                var lielem=event.target.parentElement;
-                var current=lielem.nextSibling;
-                while(current!=null && current.nodeName!="LI"){
-                                current=current.nextSibling;
-                }       
-                if(current.nodeName=="LI"){
-				
-                                var list=current.querySelectorAll("nested");
-								alert("Hej");
-                                for(i=0;i<list.length;i++){
-												
-                                                alert(list[i].style.display);
-                                                if(list[i].style.display != "block"){
-                                                          list[i].style.display="block";
-                                                }else {
-                                                          list[i].style.display="none";                                                   
+		
+		 <script>
+                
+                 function klickad(event)
+        {                       
+                                var current=event.target.parentElement;
+                                if(current.nodeName=="LI"){
+                                                //var list=current.querySelectorAll("UL");
+                                                list=current.childNodes;
+                                                for(i=0;i<list.length;i++){
+                                                                if(list[i].nodeName=="UL"){
+                                                                                //Visar om vi är rätt
+                                                                                alert(list[i].style.display+" "+list[i].innerHTML);
+                                                                                if(list[i].style.display != "block"){
+                                                                                                                        list[i].style.display="block";
+                                                                                }else {
+                                                                                                                        list[i].style.display="none"; 
+
+                                                                                }
+                                                                }
                                                 }
                                 }
-                }
-	}
+        }
+		
+		function setupclick()
+        {
+                        document.body.addEventListener('click', clickhandler, true);     
+        }
+
+        function clickhandler(event)
+        {
+                        alert(event.target.id);
+        }
 		
 		/*var document;
 		document.getElementById("menu").addEventListener("click", openMenu()){
@@ -176,53 +139,53 @@
 		</script>
 
   </head > 
-  <body> 
+  <body onload="setupclick();"> 
     
   		<ul id="nav">
-		<li><a href="vertical3.html">Hem</a></li>
-		<li><button onclick="klickad(event)">Try it</button><a href="#">Blommor</a>
+		<li><a href="vertical3.html" id="hemknapp">Hem</a></li>
+		 <li><button id="blomknapp" onclick="klickad(event)">Blommor</button>
 			<ul id="blom">
 					
-					<li id="menu"><a href="#"><button onclick="klickad(event)">Tulpan</button></a>
-						<ul id= "nested">
-								<li><a href="vert3tulpan.html">Laura Fygi</a>
+					<li><button id="tulpanknapp" onclick="klickad(event)">Tulpan</button>
+						<ul id="tulpan">
+								<li><a href="vert3tulpan.html" id="Lfygiknapp">Laura Fygi</a>
 								</li>
-								<li><a href="vert3fras.html">Frastulpan<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
+								<li><a href="vert3fras.html" id="frasknapp">Frastulpan<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
 								</li>
-								<li><a href="vert3tulip.html">Florenskyi<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
+								<li><a href="vert3tulip.html" id="florenskyiknapp">Florenskyi<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
 								</li>
 						</ul>
 					</li>
 					
-					<li><a href="#"><span class="caret">Ros</span></a>
-						<ul id="nested">
-							<li><a href="vert3floribunda.html">Floribundaros<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
+					<li><button id="rosknapp" onclick="klickad(event)">Ros</button>
+						<ul>
+							<li><a href="vert3floribunda.html" id="floribundaknapp">Floribunda<i style='font-size:24px' class= 'fas' &#xf105;></i></a>
 							</li>
-							<li><a href="vert3vres.html">Vresros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3vres.html" id="vresrosknapp">Vresros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
-							<li><a href="vert3rodros.html">Röd klätterros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3rodros.html" id="rodrosknapp">Röd ros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
-							<li><a href="vert3rosa.html">Jungfruros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3rosa.html" id="jrosknapp">Jungfruros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
-							<li><a href="vert3midros.html">Schersmin<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3midros.html" id="schersminknapp">Schersmin<i style='font-size:24px' class='fas'&#xf105;></i></a>
 							</li>
 						</ul>
 					</li>
 					
-					<li><a href="vert3pion.html">Pion<i style='font-size:24px' class='fas'&#xf105;></i></a>
+					<li><a href="vert3pion.html" id="pionknapp">Pion<i style='font-size:24px' class='fas'&#xf105;></i></a>
 					</li>
 					
-					<li><a href="vert3solros.html">Solros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+					<li><a href="vert3solros.html" id="solrosknapp">Solros<i style='font-size:24px' class='fas'&#xf105;></i></a>
 					</li>
 				</ul>
 		</li>
-		<li><a href="vert3fest.html">Festhögtid<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
-		<li><a href="vert3kontakt.html">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
+		<li><a href="vert3fest.html" id="festknapp">Festhögtid<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
+		<li><a href="vert3kontakt.html" id="kontaktknapp">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
 		</ul>
 	
 	<h3 style="background-color:#FFF3E0; color:#000000; margin-left:450px; width:25%; height:30px; text-align:center; position:fixed; 
 			padding-top:10px; font-size:18px; font-family: Verdana, sans-serif; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);">
-			Välkommen till Finn Flora</h3>
+			Välkommen till Finna Flora</h3>
 	
 	
 	</body>
