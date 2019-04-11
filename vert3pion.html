@@ -36,9 +36,26 @@
 			-o-transition:all 0.3s; 
 			transition:all 0.3s; 
 			border-left:5px solid #00BCD4;
-			z-index:0;
-			
+			display:block;	
 		}
+		
+		#nav span{
+			list-style:none;
+			background-color:#B2EBF2;
+			width:220px;
+			padding: 15px;
+			border-style: none;
+			text-decoration: none;
+			color: #000000;
+			font: bold 18px sans-serif;	
+			font-family: Verdana;
+			display:block;			
+			border-bottom:1px dotted #00BCD4;
+			-webkit-transition:all 0.3s; 
+			-o-transition:all 0.3s; 
+			transition:all 0.3s; 
+		}
+		
 		#nav li a{
 			display:block;
 			padding:15px;
@@ -46,7 +63,7 @@
 			text-decoration:none;
 			box-shadow:2px 2px 5px #ccc;
 			color:#000000;
-			font:bold 16px sans-serif;
+			font:bold 18px sans-serif;
 			font-family: Verdana;
 		}
 		
@@ -55,62 +72,46 @@
 			position: fixed;
 		}
 		
-		.tulip{
-			border-left:1px solid #B2EBF2;
-		}
+
+		/*
 		#nav li a:hover{
 			 background:#4DD0E1; color:#000000; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
 		}
+		*/
+		
 		#nav li ul{
 			display:none;
 		}
+		
+		/*
 		#nav li:hover ul{
 			display:block;
 			
 		}
 		#nav li:hover ul li{
 			color:#000000;
-			
-			
-	
 		}
 		#nav li:hover ul li a{
 			color:#000000;
-			
 		}
+		
 		#nav li:hover ul li a:hover{
 			background:#4DD0E1; color:#000000; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12); 
 		}
+		
+*/		
+		
+/*		
 		#nav li ul li ul li{
 			display:none;
 		}
+*/
+		
+/*		
 		#nav li ul li:hover ul li {
 			display:block;
 		}
-		
-		i {
-	  border: solid black;
-	  border-width: 0 2px 2px 0;
-	  display: inline-block;
-	  padding: 3px;
-	  margin-left:55px;
-		}
-
-	.fas {
-	  transform: rotate(45deg);
-	  -webkit-transform: rotate(45deg);
-	  
-	}
-	
-	.fas2 {
-	  transform: rotate(-45deg);
-	  -webkit-transform: rotate(-45deg);
-	}
-		.active{
-		color:#000000;
-		background:##4DD0E1;
-		border-left:5px solid #00BCD4;
-		}
+		*/
 		
 		#pioner{
 		display: block;
@@ -143,55 +144,91 @@
 		  z-index: -1;
 		}
 		
+		
+		
+			
+		
 </style>
 
+		<script>
+		
+		 function klickad(event)
+	{			
+				var current=event.target.parentElement;
+				if(current.nodeName=="LI"){
+						//var list=current.querySelectorAll("UL");
+						list=current.childNodes;
+						for(i=0;i<list.length;i++){
+								if(list[i].nodeName=="UL"){
+										//Visar om vi är rätt
+										// alert(list[i].style.display+" "+list[i].innerHTML);
+										if(list[i].style.display != "block"){
+															list[i].style.display="block";
+										}else {
+															list[i].style.display="none";                                                   
+										}
+								}
+						}
+				}
+	}
+		
+	function setupclick()
+	{
+			document.body.addEventListener('click', clickhandler, true); 	
+	}
+
+	function clickhandler(event)
+	{
+			// alert(event.target.id);
+	}
+			
+			</script>
+
   </head > 
-  <body > 
+  <body onload="setupclick();"> 
     
   		<ul id="nav">
-		<li><a href="vertical3.html">Hem<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
-		<li><a href="#">Blommor<i style='font-size:24px' class='fas'&#xf105;></i></a>
+		<li><a href="vert3.html" id="hemknapp" >Hem&nbsp;&#10095;</a></li>
+		<li><span id="blomknapp" onclick="klickad(event)">Blommor&nbsp;&#10095;</span>
 			<ul id="blom">
-					
-					
-					<li><a href="#">Tulpan<i style='font-size:24px' class='fas'&#xf105;></i></a>
-						<ul class="tulip">
-								<li><a href="vert3tulpan.html">Laura Fygi<i style='font-size:24px' class='fas'&#xf105;></i></a>
+				<li><span onclick="klickad(event)">Tulpan&nbsp;&#10095;</span>
+					<ul id="tulpan">
+								<li><a href="vert3tulpan.html">Laura Fygi&nbsp;&#10095;</a>
 								</li>
-								<li><a href="vert3fras.html">Frastulpan<i style='font-size:24px' class='fas'&#xf105;></i></a>
+								<li><a href="vert3fras.html">Frastulpan&nbsp;&#10095;</a>
 								</li>
-								<li><a href="vert3tulip.html">Florenskyi<i style='font-size:24px' class='fas'&#xf105;></i></a>
+								<li><a href="vert3tulip.html">Florenskyi&nbsp;&#10095;</a>
 								</li>
-							</ul>
+						</ul>
 					</li>
-					<li><a href="#">Ros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+					
+					<li><span onclick="klickad(event)">Ros&nbsp;&#10095;</span>
 						<ul>
-							<li><a href="vert3floribunda.html">Floribunda<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3floribunda.html">Floribunda&nbsp;&#10095;</a>
 							</li>
-							<li><a href="vert3vres.html">Vresros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3vres.html">Vresros&nbsp;&#10095;</a>
 							</li>
-							<li><a href="vert3rodros.html">Röd ros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3rodros.html">Röd klätterros&nbsp;&#10095;</a>
 							</li>
-							<li><a href="vert3rosa.html">Jungfruros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3rosa.html">Jungfruros&nbsp;&#10095;</a>
 							</li>
-							<li><a href="vert3midros.html">Schersmin<i style='font-size:24px' class='fas'&#xf105;></i></a>
+							<li><a href="vert3midros.html">Schersmin&nbsp;&#10095;</a>
 							</li>
 						</ul>
 					</li>
-					<li><a href="vert3pion.html">Pion<i style='font-size:24px' class='fas'&#xf105;></i></a>
+					
+					<li><a href="vert3pion.html">Pion&nbsp;&#10095;</a>
 					</li>
 					
-					<li><a href="#">Solros<i style='font-size:24px' class='fas'&#xf105;></i></a>
+					<li><a href="vert3solros.html">Solros&nbsp;&#10095;</a>
 					</li>
 				</ul>
 		</li>
-		<li><a href="vert3fest.html">Festhögtid<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
-		<li><a href="vert3kontakt.html">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a></li>
+		<li><a href="vert3fest.html">Festhögtid&nbsp;&#10095;</a></li>
+		<li><a href="vert3kontakt.html">Kontakt&nbsp;&#10095;</a></li>
 		</ul>
 	
-	
-	
-		<h2 id="rubrik">Buskpion</h2>
+	<h2 id="rubrik">Buskpion</h2>
 			<div id="bildtext">Buskpion eller trädpion (Paeonia Suffruticosa-gruppen) är en grupp i familjen pionväxter som innehåller 
 			hybrider med komplext ursprung. Dessa är vanligen mer eller mindre fylldblommiga och har till stor del utvecklats i Kina, 
 			Japan och Vietnam. Arten är endogen i Kina, där den anses vara landets nationalblomma och den odlas särskilt mycket i Luoyang (Wikipedia 2019). </div>
