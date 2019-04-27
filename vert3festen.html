@@ -11,20 +11,26 @@
 		padding: 0;
 		}
 		
+		html,body{
+		height:100%;
+		}
+		
 		body{
 	  background-color:#006064;
 	  background-size:cover;
 	  margin:20px;
 	  min-width:1000px;
-		z-index: -1;
+		z-index:-1;
+		overflow:auto;
 		}
 
 		#nav{
 			margin:0; 
 			padding:0;
-			
+			position:relative;
 			
 		}
+		
 		#nav li{
 			list-style:none;
 			background-color:#B2EBF2;
@@ -70,7 +76,7 @@
 		
 		#blom{
 			border-left:1px solid #B2EBF2;
-			position: fixed;
+			
 		}
 		
 		#nav li ul{
@@ -114,13 +120,13 @@
 		transition:all 0.3s; 			
 		}		
 			
-/*		
+	/*		
 		#nav li ul li ul li{
 			display:none;
 		}
-*/
+	*/
 		
-/*		
+	/*		
 		#nav li ul li:hover ul li {
 			display:block;
 		}
@@ -131,6 +137,7 @@
 		margin-top:50px;
 		width: 40%;
 		z-index: -1;
+		position:fixed;
 		}
 		
 		#pioner{

@@ -11,20 +11,28 @@
 		padding: 0;
 		}
 		
+		html,body{
+		height:100%;
+		}
+		
 		body{
 	  background-image: url("midsommarrosen.jpg");
 	  background-size:cover;
 	  margin:20px;
 	  min-width:1000px;
 		z-index: -1;
+		overflow:auto;
+	  		
 		}
 
 		#nav{
 			margin:0; 
 			padding:0;
-			
+			position:relative;
 			
 		}
+		
+		
 		#nav li{
 			list-style:none;
 			background-color:#B2EBF2;
@@ -38,10 +46,6 @@
 			border-left:5px solid #00BCD4;
 			display:block;
 			
-		}
-		
-		#nav ul li{
-		overflow: auto;
 		}
 		
 		#nav span{
@@ -60,6 +64,7 @@
 			-webkit-transition:all 0.3s; 
 			-o-transition:all 0.3s; 
 			transition:all 0.3s; 
+			
 		}
 		
 		#nav li a{
@@ -71,15 +76,14 @@
 			color:#000000;
 			font:bold 18px sans-serif;
 			font-family: Verdana;
+				
 		}
 		
 		#blom{
 			border-left:1px solid #B2EBF2;
-			position: fixed;
+					
 		}
-		
-
-		
+				
 		#nav li a:hover{
 			 background:#4DD0E1; 
 			 color:#000000; 
@@ -180,12 +184,16 @@
 	}
 			
 			</script>
-
+		
+		<h3 style="background-color:#FFF3E0; color:#000000; margin-left:450px; width:25%; height:30px; text-align:center; background-attachment:fixed; 
+			padding-top:10px; font-size:18px; font-family: Verdana, sans-serif; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);">
+			Välkommen till Finna Flora</h3>
+		
   </head > 
   <body onload="setupclick();"> 
     
   		<ul id="nav">
-		<li><a href="vert3.html" id="hemknapp" >Hem&nbsp;&#10095;</a></li>
+		<li><span a href="vert3.html" id="hemknapp" >Hem&nbsp;&#10095;</a></span></li>
 		<li><span id="blomknapp" onclick="klickad(event)">Blommor&nbsp;&#10095;</span>
 			<ul id="blom">
 				<li><span onclick="klickad(event)">Tulpan&nbsp;&#10095;</span>
@@ -225,9 +233,7 @@
 		<li><a href="vert3kontakt.html">Kontakt&nbsp;&#10095;</a></li>
 		</ul>
 	
-	<h3 style="background-color:#FFF3E0; color:#000000; margin-left:450px; width:25%; height:30px; text-align:center; position:fixed; 
-			padding-top:10px; font-size:18px; font-family: Verdana, sans-serif; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);">
-			Välkommen till Finna Flora</h3>
+	
 	
 	
 	</body>
