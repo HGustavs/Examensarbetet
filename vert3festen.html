@@ -20,7 +20,7 @@
 	  background-size:cover;
 	  margin:20px;
 	  min-width:1000px;
-		z-index:-1;
+		z-index:1;
 		overflow:auto;
 		}
 
@@ -77,6 +77,10 @@
 		#blom{
 			border-left:1px solid #B2EBF2;
 			
+		}
+		
+		img .innehall{
+		position:sticky;
 		}
 		
 		#nav li ul{
@@ -137,7 +141,7 @@
 		margin-top:50px;
 		width: 40%;
 		z-index: -1;
-		position:fixed;
+		
 		}
 		
 		#pioner{
@@ -145,7 +149,8 @@
 		margin-left:270px;
 		margin-top:50px;
 		width: 40%;
-		z-index: -1;
+		z-index: -100;
+		background-attachment:fixed;
 		}
 		
 		#bloms{
@@ -178,6 +183,7 @@
 		margin-top:30;
 		width: 40%;
 		z-index: -1;
+		
 		}
 		
 		
@@ -195,6 +201,7 @@
 		  font-family:"Verdana";
 		  font-style: italic;
 		  z-index: -1;
+		  
 		}
 		
 		#rubrik1{
@@ -204,6 +211,7 @@
 		font-size:18px;
 		margin-top:30px;
 		margin-left:100px;
+		
 		}
 		
 		
@@ -247,7 +255,8 @@
 	}
 			
 			</script>
-
+			
+			
   </head > 
   <body onload="setupclick();"> 
     
@@ -295,12 +304,12 @@
 			<h2 id="rubrik1">Festhögtid</h2>
 				<div id="bildtext">Välj önskad blomma till vardag eller fest!</div>
 				
-				<img src="piooni2.jpg" id="pioner" alt="pion" style="width:150px;height:150px;">
+				
+				<img src="piooni2.jpg" id="pioner" alt="pion" style="width:150px;height:150px; position:sticky;">
 				<img src="florenskyi.jpg" id="bloms" alt="florensky" style="width:150px;height:150px;">
 				<img src="tulpan.jpg" id="tulp" alt="tulpan" style="width:150px;height:150px;">
 				<img src="rödros.jpg" id="ruusu" alt="ros" style="width:150px;height:150px;">
-				<img src="solros.jpg" id="solr" alt="solros" style="width:150px;height:150px;">
-	
+				<img src="solros.jpg" id="solr" alt="solros" style="width:150px;height:150px;">				
 	
 	
 	</body>
