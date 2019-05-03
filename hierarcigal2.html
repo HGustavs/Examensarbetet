@@ -128,10 +128,78 @@
 	  transform: rotate(-45deg);
 	  -webkit-transform: rotate(-45deg);
 	}
+	
+	
+		.start_timer{
+		backround-color:#5d5;
+		}
+		.stop_timer{
+		background-color:red;
+		}
+		
+	#output{
+		width:100px;
+		height:20px;
+		background-color:#CCC;
+	}	
+	
+	
 	</style>
 	
 	<script type="text/javascript">
-		var i, timer, divide;
+	
+		/*var ss = document.getElementsByClassName('stopwatch');
+		[].forEach.call(ss,function (s){
+		var currentTimer=0,
+		interval=0,
+		lastUpdateTime=new Date().getTime(),
+		start= s.querySelector('button.start'),
+		stop= s.querySelector('button.stop'),
+		reset= s.querySelector('button.reset'),
+		mins= s.querySelector('span.minutes'),
+		secs= s.querySelector('span.seconds'),
+		cents= s.querySelector('span.centiseconds');
+		
+		start.addEventListener('click', startTimer);
+		stop.addEventListener('click', stopTimer);
+		reset.addEventListener('click', resetTimer);
+		
+		function pad (n){
+		return ('00' + n).substr(-2);
+		}
+		function update(){
+		var now = new Date().getTime(),
+		dt = now - lastUpdateTime;
+		currentTimer+=dt;
+			var time= new Date(currentTimer);
+			mins.innerHTML=pad(time.getMinutes());
+			secs.innerHTML=pad(time.getSeconds());
+			cents.innerHTML=pad(Math.floor(time.getMilliseconds()/10));
+		
+		lastUpdateTime=now;}
+		
+			function startTimer(){
+				if (!interval) {
+					lastUdateTime=new Date().getTime();
+					interval=setInterval(update, 1);
+			}
+			}
+			
+			function stopTimer(){
+				clearInterval(interval);
+				interval=0;
+			}
+			
+			function resetTimer(){
+				stopTimer();
+				
+				currentTimer=0;
+				mins.innerHTML=secs.innerHTML=cents.innerHTML=pad(0);
+			
+			}
+		});*/
+	
+		/*var i, timer, divide;
 		i=0;
 		divide=100;
 		var timer_out;
@@ -140,34 +208,124 @@
 		timer=self.setInterval("increment()",(1000/divide))
 		}
 		function increment(){
+		var time;
 		i++;
-		documentgetElementById("timer_out").innerHTML=(i/divide);
-		
+		var	secs=Math.floor(time/10/60);
+		var mins=Math.floor(time/10/60);
+		var tenths=time%10;
+		/*documentgetElementById("timer_out").innerHTML=(i/divide);*/
+		/*document.getElementById("timer_out").innerHTML = mins + ":" + secs + ":" + tenths;
 		}
-		function stop(){
+		function Stop(){
 		clearInterval(timer);
 		timer=null;
 		}
 		function reset(){
 		stop();
-		i=0;
+		i=0 
 		documentgetElementById("timer_out").innerHTML=(i/divide);
+		}*/
+		
+		/*var timer= setInterval(TimerHandler, 1000);
+		var	sec=0;
+		var min=0;
+		var hour=0;
+		
+		function Timerhandler () {
+		sec++;
+			if (sec == 60){
+			sec=0;
+			min++;
+		}  if (min ==60){
+		min==0;
+		hour++;
+		}
+		DisplayTime();
+		}
+			function DisplayTime(){
+			
+			select timer_element = documentgetElementById("timer");
+			timer_element.innerHTML=hour + ":" + min + ":" + sec;
+			
+			}
+			
+			/*function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  var t;
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+  t = setTimeout(function(){ startTime() }, 500);
+}
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+function StopFunction(){
+	t=null;
+	clearTimeout(t);
+	
+}*/
+		var time=0;
+		var started;
+		var running=0;
+		
+		function start(){
+			
+			running=1;
+			increment()
+			document.getElementById("start").innerHTML="Pause";
+			}
+		
+		
+		function stop(){
+		running=0;
+		document.getElementById("stop").innerHTML="Resume";
 		}
 		
-			
-			
+		function increment(){
+			if(running==1){
+			setTimeout(function(){
+				time++;
+				var mins=Math.floor(time/10/60);
+				var secs=Math.floor(time/10);
+				var tenths=time%10;
+				document.getElementById("output").innerHTML = mins + ":" + secs + ":" + tenths;
+				increment();
+				},100);
+				console.log("");
+		}
+		}
+
 	
 	</script>
 
-  </head > 
-  <body > 
-  <span id="timer_out" style="color:#fff">
-    0.00
-	</span>
+  </head> 
+  <body> 
+  
+  <!--<div id="timer" style="color:#fff">
+    01:30:20
+	</div>
 	<button id="start_timer" onclick="start();">Start</button>
-	<button id="stop_timer" onclick="stop();">Stop</button>
-	<button id="reset_timer" onclick="reset();">Reset</button>
+	<button id="stop_timer" onclick="Stop();">Stop</button>
+	<!--<button class="start">Start</button>
+	<button class="stop">Stop</button>
+	</div>
 	
+	<div id="txt"></div>-->
+	
+	<p id="output"></p>
+		<div id="controls">
+	<button id="start_b" onclick="start();">Start</button>
+	<button id="stop_b" onclick="stop();">Stop</button>
 	<div class="navbar">
 	  <nav>
 
@@ -184,7 +342,7 @@
 				<ul>
 					<li><a href="tulpan.html">Laura Fygi<i style='font-size:24px' class='fas2'&#xf105;></i></a>
 					</li>
-					<li><a href="frastulpan.html">Frastulpan<i style='font-size:24px' class='fas2'&#xf105;></i></a>
+					<li><a href="frastulpan.html"onclick="start();">Frastulpan<i style='font-size:24px' class='fas2'&#xf105;></i></a>
 					</li>
 					<li><a href="flortulp.html">Florenskyi<i style='font-size:24px' class='fas2'&#xf105;></i></a>
 					</li>
@@ -205,14 +363,14 @@
 					<li><a href="midsomroshierarc.html">Schersmin<i style='font-size:24px' class='fas2'&#xf105;></i></a>
 					</li>
 				</ul>
-				</li>
+			</li>
 			<li><a href="aurinkokukka.html">Solros<i style='font-size:24px' class='fas2'&#xf105;></i></a>
 				</li>
 		</ul>
 	</li>
 	<li><a href="fest.html">Festhögtid<i style='font-size:24px' class='fas'&#xf105;></i></a>
 	</li>
-	<li><a href="kontakt.html">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a>
+	<li><a href="kontakt.html" onclick="stop();">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a>
 	</li>
 	
 	</ul>
