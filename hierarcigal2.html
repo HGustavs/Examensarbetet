@@ -1,9 +1,11 @@
 <! DOCTYPE html> 
 <html> 
-  <head > 
+  <head> 
     <title > Blomsterhandel </title > 
 	<meta charset="UTF-8">
-	
+	<script>
+        var starttime=new Date();
+	</script>
 	<style>
 		body{
 		background-image: url("midsommarrosen.jpg");
@@ -19,9 +21,9 @@
 	}
 	
 	ul{
-	text-align:left;
+	text-align:center;
 	display:inline;
-	margin:0;
+	margin:57px;
 	padding:0;
 	list-style:none;
 	
@@ -46,33 +48,34 @@
 	color:#000000;
 	font-size:18px;
 	margin-top:25px;
+	text-align:center;
 	}
 	
 	ul li:hover{
 		background-color:#4DD0E1;
 		color:#000000;
-		padding:10px 10px 10px 10px;
+		padding:15px 10px 10px 0px;
 		border-left:5px solid #00BCD4;
-		box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+		
 		
 	}
 	
-	
-	
-	
+			
 	ul li ul{
 	padding:0px;
 	position:absolute;
-	top:50px;
-	left:0;
+	top:18px;
+	left:46px;
 	width:250px;
 	display:none;
-	box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+	
 	
 	}
 	
 	ul li ul li{
 	background:#B2EBF2;
+	top:-20px;
+	left:-110;
 	display:block;
 	}
 	
@@ -80,29 +83,29 @@
 	color:#000000;
 	background-color:#4DD0E1;
 	border-left:5px solid #00BCD4;;
-	
-		
+			
 	}
 	
 	ul li:hover ul{
 	display:block;
-	box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);
+	
 	}
 	
 	.blom li{
 	border-bottom:1px dotted #00BCD4; 
-	margin-left:-6px;
+	
 	}
 	
 		
 	ul ul ul li{
 	display:none;
+	top:-57px;
+	left:-57;
 	}
 	
 	ul ul li:hover li{
 	display:block;
-	
-	
+		
 	}
 	
 	ul ul ul{
@@ -129,209 +132,118 @@
 	  -webkit-transform: rotate(-45deg);
 	}
 	
-	
-		.start_timer{
-		backround-color:#5d5;
-		}
-		.stop_timer{
-		background-color:red;
-		}
 		
-	#output{
-		width:100px;
-		height:20px;
-		background-color:#CCC;
+		
+	#home{
+	 margin-left:60px;
 	}	
+	
+	#export
+{
+        position:fixed;
+        bottom:0px;
+        right:0px;
+        width:32px;
+        height:32px;
+}
+
 	
 	
 	</style>
 	
 	<script type="text/javascript">
 	
-		/*var ss = document.getElementsByClassName('stopwatch');
-		[].forEach.call(ss,function (s){
-		var currentTimer=0,
-		interval=0,
-		lastUpdateTime=new Date().getTime(),
-		start= s.querySelector('button.start'),
-		stop= s.querySelector('button.stop'),
-		reset= s.querySelector('button.reset'),
-		mins= s.querySelector('span.minutes'),
-		secs= s.querySelector('span.seconds'),
-		cents= s.querySelector('span.centiseconds');
 		
-		start.addEventListener('click', startTimer);
-		stop.addEventListener('click', stopTimer);
-		reset.addEventListener('click', resetTimer);
-		
-		function pad (n){
-		return ('00' + n).substr(-2);
-		}
-		function update(){
-		var now = new Date().getTime(),
-		dt = now - lastUpdateTime;
-		currentTimer+=dt;
-			var time= new Date(currentTimer);
-			mins.innerHTML=pad(time.getMinutes());
-			secs.innerHTML=pad(time.getSeconds());
-			cents.innerHTML=pad(Math.floor(time.getMilliseconds()/10));
-		
-		lastUpdateTime=now;}
-		
-			function startTimer(){
-				if (!interval) {
-					lastUdateTime=new Date().getTime();
-					interval=setInterval(update, 1);
-			}
-			}
-			
-			function stopTimer(){
-				clearInterval(interval);
-				interval=0;
-			}
-			
-			function resetTimer(){
-				stopTimer();
-				
-				currentTimer=0;
-				mins.innerHTML=secs.innerHTML=cents.innerHTML=pad(0);
-			
-			}
-		});*/
-	
-		/*var i, timer, divide;
-		i=0;
-		divide=100;
-		var timer_out;
-		
-		function start(){
-		timer=self.setInterval("increment()",(1000/divide))
-		}
-		function increment(){
-		var time;
-		i++;
-		var	secs=Math.floor(time/10/60);
-		var mins=Math.floor(time/10/60);
-		var tenths=time%10;
-		/*documentgetElementById("timer_out").innerHTML=(i/divide);*/
-		/*document.getElementById("timer_out").innerHTML = mins + ":" + secs + ":" + tenths;
-		}
-		function Stop(){
-		clearInterval(timer);
-		timer=null;
-		}
-		function reset(){
-		stop();
-		i=0 
-		documentgetElementById("timer_out").innerHTML=(i/divide);
-		}*/
-		
-		/*var timer= setInterval(TimerHandler, 1000);
-		var	sec=0;
-		var min=0;
-		var hour=0;
-		
-		function Timerhandler () {
-		sec++;
-			if (sec == 60){
-			sec=0;
-			min++;
-		}  if (min ==60){
-		min==0;
-		hour++;
-		}
-		DisplayTime();
-		}
-			function DisplayTime(){
-			
-			select timer_element = documentgetElementById("timer");
-			timer_element.innerHTML=hour + ":" + min + ":" + sec;
-			
-			}
-			
-			/*function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  var t;
-  // add a zero in front of numbers<10
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
-  t = setTimeout(function(){ startTime() }, 500);
-}
+	// Current date and time in javascript from
+                // https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
+                
+                function start(){
+                                var now = new Date();
+                                var daystr = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
+                                var timestr = now.getHours() + ":" + now.getMinutes() + ":" + 
+				now.getSeconds() + " " + now.getMilliseconds();
+                                var loadtime=now-starttime;             // Ms between document start and
 
-function checkTime(i) {
-  if (i < 10) {
-    i = "0" + i;
-  }
-  return i;
-}
-
-function StopFunction(){
-	t=null;
-	clearTimeout(t);
-	
-}*/
-		var time=0;
-		var started;
-		var running=0;
+                                var url=" "+window.location;
+                                url=url.substr(7);
+                        
+                                document.body.addEventListener("click", 
+					function(){clickelement(event);}, false);               
+                        
+                                csvRow=url+","+daystr+","+timestr+","+loadtime+",Loading\n"
+                                csvContent = localStorage.getItem('Measurements');
+                                if(csvContent === null) csvContent = "";
+                                localStorage.setItem('Measurements',csvContent+csvRow);
+                }
 		
-		function start(){
+		 // Append local storage from
+                // https://stackoverflow.com/questions/7679955/how-to-append-to-html5-localstorage 
+
+                
+                // Click any element from
+                // https://stackoverflow.com/questions/11921450/body-onclick-anything-function
+                
+                function clickelement(event)
+                {
+                                var now = new Date();
+                                var daystr = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
+                                var timestr = now.getHours() + ":" + now.getMinutes() + ":" + 
+now.getSeconds() + " " + now.getMilliseconds();
+                                var loadtime=now-starttime;             // Ms between document start and
+
+                                var url=" "+window.location;
+                                url=url.substr(7);
+                                var text=event.target.innerText;
+                                var name=event.target.tagName;
+		
+		
+		csvRow=url+","+daystr+","+timestr+","+loadtime+","+name+","+text+",Click\n"
+                                csvContent = localStorage.getItem('Measurements');
+                                if(csvContent === null) csvContent = ""                 
+                                localStorage.setItem('Measurements',csvContent+csvRow);
+
+                }
+                
+                // Export csv from
+                // https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side
+                
+                function exportcsv()
+                {
+                                csvContent = 
+"data:text/csv;charset=utf-8,"+localStorage.getItem('Measurements');
+                        
+                                var encodedUri = encodeURI(csvContent);
+                                var link = document.createElement("a");
+                                link.setAttribute("href", encodedUri);
+                                link.setAttribute("download", "my_data.csv");
+                                document.body.appendChild(link); // Required for FF
 			
-			running=1;
-			increment()
-			document.getElementById("start").innerHTML="Pause";
-			}
-		
-		
-		function stop(){
-		running=0;
-		document.getElementById("stop").innerHTML="Resume";
-		}
-		
-		function increment(){
-			if(running==1){
-			setTimeout(function(){
-				time++;
-				var mins=Math.floor(time/10/60);
-				var secs=Math.floor(time/10);
-				var tenths=time%10;
-				document.getElementById("output").innerHTML = mins + ":" + secs + ":" + tenths;
-				increment();
-				},100);
-				console.log("");
-		}
-		}
-
+			link.click(); // This will download the data file named "my_data.csv".          
+                }
 	
 	</script>
-
+	<img src="logotype.jpg" width="50" height="50" style="position:absolute; padding:2px">
   </head> 
-  <body> 
+  <body onload="start();"> 
+		  <div id="export" onclick="exportcsv();"><svg version="1.1" id="Layer_1" 
+		xmlns="http://www.w3.org/2000/svg" 
+		xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" 
+		height="32px" viewBox="0 0 39.5 41.375" enable-background="new 0 0 39.5 
+		41.375" xml:space="preserve"><g><polygon fill="#FFFFFF" 
+		points="17.626,20.584 21.46,20.584 21.46,9.209 26.793,9.209 19.483,1.899 
+		12.174,9.209 17.626,9.209        "/><polygon fill="#FFFFFF" 
+		points="26.793,13.584 26.793,17.417 32.709,17.417 32.709,35.751 
+		6.376,35.751 6.376,17.417 12.174,17.417 12.174,13.584 2.543,13.584 
+		2.543,39.584 36.543,39.584 36.543,13.584         "/></g></svg></div>
   
-  <!--<div id="timer" style="color:#fff">
-    01:30:20
-	</div>
-	<button id="start_timer" onclick="start();">Start</button>
-	<button id="stop_timer" onclick="Stop();">Stop</button>
-	<!--<button class="start">Start</button>
-	<button class="stop">Stop</button>
-	</div>
-	
-	<div id="txt"></div>-->
-	
-	<p id="output"></p>
-		<div id="controls">
-	<button id="start_b" onclick="start();">Start</button>
-	<button id="stop_b" onclick="stop();">Stop</button>
+  	
 	<div class="navbar">
+	
 	  <nav>
-
+	
 	<ul class="blom">
 
-	<li><a href="hierarcigal2.html">Hem<i style='font-size:24px' class='fas'&#xf105;></i></a>
+	<li><a href="hierarcigal2.html" id="home">Hem<i style='font-size:24px' class='fas'&#xf105;></i></a>
 	</li>
 
 	<li><a href="hierarcigal2.html">Blommor<i style='font-size:24px' class='fas'&#xf105;></i></a>
@@ -370,14 +282,13 @@ function StopFunction(){
 	</li>
 	<li><a href="fest.html">Festhögtid<i style='font-size:24px' class='fas'&#xf105;></i></a>
 	</li>
-	<li><a href="kontakt.html" onclick="stop();">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a>
+	<li><a href="kontakt.html">Kontakt<i style='font-size:24px' class='fas'&#xf105;></i></a>
 	</li>
 	
 	</ul>
 		</div>
 	</nav>
 	
-			<h3 style="background-color:#FFF3E0; color:#000000; margin-left:450px; width:25%; height:30px; text-align:center; 
-			padding-top:10px; font-size:20px; font-weight:bold; font-family:verdana, sans-serif; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);">Välkommen till Finna Flora</h3>
+		
 	</body>
   </html>

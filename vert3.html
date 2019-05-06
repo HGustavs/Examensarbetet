@@ -83,6 +83,10 @@
 			border-left:1px solid #B2EBF2;
 					
 		}
+		
+		#hemknapp a{
+		margin-left:7px;
+		}
 				
 		#nav li a:hover{
 			 background:#4DD0E1; 
@@ -182,18 +186,19 @@
 	{
 			// alert(event.target.id);
 	}
-			
+	
+				
 			</script>
 		
-		<h3 style="background-color:#FFF3E0; color:#000000; margin-left:450px; width:25%; height:30px; text-align:center; background-attachment:fixed; 
-			padding-top:10px; font-size:18px; font-family: Verdana, sans-serif; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.12);">
-			Välkommen till Finna Flora</h3>
+		
 		
   </head > 
   <body onload="setupclick();"> 
+  
     
   		<ul id="nav">
-		<li><span a href="vert3.html" id="hemknapp" >Hem&nbsp;&#10095;</a></span></li>
+		
+		<li><img src="logotype.jpg" width="50" height="50" style="position:absolute;padding:2px"><span a href="vert3.html" id="hemknapp" style="text-align:center">Hem&nbsp;&#10095;</a></span></li>
 		<li><span id="blomknapp" onclick="klickad(event)">Blommor&nbsp;&#10095;</span>
 			<ul id="blom">
 				<li><span onclick="klickad(event)">Tulpan&nbsp;&#10095;</span>
