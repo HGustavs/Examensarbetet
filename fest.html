@@ -3,7 +3,9 @@
   <head> 
     <title > Blomsterhandel </title > 
 	<meta charset="UTF-8">
-	
+	<script>
+        var starttime=new Date();
+	</script>
 	<style>
 		body{
 		background-color:#006064;
@@ -190,10 +192,101 @@
 		  font-style: italic;
 		  z-index: -1;
 		}
-	</style>
+	
+	#export
+	{
+			position:fixed;
+			bottom:0px;
+			right:0px;
+			width:32px;
+			height:32px;
+	}
 
+		</style>
+	
+	<script type="text/javascript">
+	
+		
+	// Current date and time in javascript from
+                // https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
+                
+                function start(){
+                                var now = new Date();
+                                var daystr = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
+                                var timestr = now.getHours() + ":" + now.getMinutes() + ":" + 
+				now.getSeconds() + " " + now.getMilliseconds();
+                                var loadtime=now-starttime;             // Ms between document start and
+
+                                var url=" "+window.location;
+                                url=url.substr(7);
+                        
+                                document.body.addEventListener("click", 
+					function(){clickelement(event);}, false);               
+                        
+                                csvRow=url+","+daystr+","+timestr+","+loadtime+",Loading\n"
+                                csvContent = localStorage.getItem('Measurements');
+                                if(csvContent === null) csvContent = "";
+                                localStorage.setItem('Measurements',csvContent+csvRow);
+                }
+		
+		 // Append local storage from
+                // https://stackoverflow.com/questions/7679955/how-to-append-to-html5-localstorage 
+
+                
+                // Click any element from
+                // https://stackoverflow.com/questions/11921450/body-onclick-anything-function
+                
+                function clickelement(event)
+                {
+                                var now = new Date();
+                                var daystr = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
+                                var timestr = now.getHours() + ":" + now.getMinutes() + ":" + 
+								now.getSeconds() + " " + now.getMilliseconds();
+                                var loadtime=now-starttime;             // Ms between document start and
+
+                                var url=" "+window.location;
+                                url=url.substr(7);
+                                var text=event.target.innerText;
+                                var name=event.target.tagName;
+		
+		
+						csvRow=url+","+daystr+","+timestr+","+loadtime+","+name+","+text+",Click\n"
+                                csvContent = localStorage.getItem('Measurements');
+                                if(csvContent === null) csvContent = ""                 
+                                localStorage.setItem('Measurements',csvContent+csvRow);
+
+                }
+                
+                // Export csv from
+                // https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side
+                
+                function exportcsv()
+                {
+                             csvContent = "data:text/csv;charset=utf-8,"+localStorage.getItem('Measurements');
+                        
+                                var encodedUri = encodeURI(csvContent);
+                                var link = document.createElement("a");
+                                link.setAttribute("href", encodedUri);
+                                link.setAttribute("download", "my_data.csv");
+                                document.body.appendChild(link); // Required for FF
+			
+					link.click(); // This will download the data file named "my_data.csv".          
+						}
+	
+	</script>
+	
   </head> 
-  <body > 
+  <body onload="start();"> 
+		  <div id="export" onclick="exportcsv();"><svg version="1.1" id="Layer_1" 
+		xmlns="http://www.w3.org/2000/svg" 
+		xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" 
+		height="32px" viewBox="0 0 39.5 41.375" enable-background="new 0 0 39.5 
+		41.375" xml:space="preserve"><g><polygon fill="#FFFFFF" 
+		points="17.626,20.584 21.46,20.584 21.46,9.209 26.793,9.209 19.483,1.899 
+		12.174,9.209 17.626,9.209        "/><polygon fill="#FFFFFF" 
+		points="26.793,13.584 26.793,17.417 32.709,17.417 32.709,35.751 
+		6.376,35.751 6.376,17.417 12.174,17.417 12.174,13.584 2.543,13.584 
+		2.543,39.584 36.543,39.584 36.543,13.584         "/></g></svg></div>
     
 	<div class="navbar">
 	  <nav>

@@ -3,7 +3,6 @@
   <head> 
     <title >vertical menu</title > 
 	<meta charset="UTF-8">
-	
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<script>
 	var starttime=new Date();
@@ -112,14 +111,14 @@
 	  -webkit-transform: rotate(-45deg);
 	}
 	
-	#export
-{
-        position:fixed;
-        bottom:0px;
-        right:0px;
-        width:32px;
-        height:32px;
-}
+		#export
+	{
+			position:fixed;
+			bottom:0px;
+			right:0px;
+			width:32px;
+			height:32px;
+	}
 	
 	
 	</style>
@@ -160,7 +159,7 @@
                                 var now = new Date();
                                 var daystr = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
                                 var timestr = now.getHours() + ":" + now.getMinutes() + ":" + 
-now.getSeconds() + " " + now.getMilliseconds();
+									now.getSeconds() + " " + now.getMilliseconds();
                                 var loadtime=now-starttime;             // Ms between document start and
 
                                 var url=" "+window.location;
@@ -169,7 +168,7 @@ now.getSeconds() + " " + now.getMilliseconds();
                                 var name=event.target.tagName;
 		
 		
-		csvRow=url+","+daystr+","+timestr+","+loadtime+","+name+","+text+",Click\n"
+							csvRow=url+","+daystr+","+timestr+","+loadtime+","+name+","+text+",Click\n"
                                 csvContent = localStorage.getItem('Measurements');
                                 if(csvContent === null) csvContent = ""                 
                                 localStorage.setItem('Measurements',csvContent+csvRow);
@@ -181,8 +180,7 @@ now.getSeconds() + " " + now.getMilliseconds();
                 
                 function exportcsv()
                 {
-                                csvContent = 
-"data:text/csv;charset=utf-8,"+localStorage.getItem('Measurements');
+                                csvContent = "data:text/csv;charset=utf-8,"+localStorage.getItem('Measurements');
                         
                                 var encodedUri = encodeURI(csvContent);
                                 var link = document.createElement("a");
